@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirby</title>
+    <link rel="icon" href="assets/img/kirby.png">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <style>
+        header{
+            margin: 0px;
+            background-color: lightpink;
+            color: rgb(185, 21, 57);
+            font-weight: bold;
+            font-size: 28px;
+            box-shadow: 2px 2px 5px 0px rgba(145, 17, 81, 0.452);
+        }
+
+        body{
+            margin: 0px;
+            font-family: 'Baloo 2',cursive;
+            min-height: 100vh;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: #ffe6f0;
+            background-attachment: fixed;
+        }
+
+        main{
+            margin: 20px;
+            height: 100%;
+            width: 100%;
+            justify-items: center;
+        }
+
+        footer {
+            background-color: rgb(141, 19, 45);
+            width: 100%;
+            height: 70px;
+            color: white;
+            justify-content: center;
+            place-items: center;
+            display: grid;
+            margin-top: auto;
+            box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.452);
+        }
+
+        a {
+            background-color: lightpink;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: rgb(185, 21, 57);
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background-color: rgb(255, 200, 220);
+            transform: scale(1.1);
+        }
+
+        @keyframes flotar {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        header img {
+            animation: flotar 3s ease-in-out infinite;
+        }
+
+        h1{
+            margin: 5px;
+        }
+
+        h2{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header style= "width: 100%; align-items: center; display: flex; justify-content: space-between;">
+        <div style="justify-items: left; padding-left: 20px; display: flex; align-items: center;">
+            <img src="assets/img/kirby.png" alt="Kirby" style="margin-right: 10px; height: 39px;">
+            <h1>Kirby</h1>
+        </div>
+        <a style="justify-items: right; padding-right: 20px;" href="/index.html"><h2>Salir</h2></a>
+    </header>
+    <main>
+        <figure style="margin: 30px; width: 30%;">
+            <img src="assets/img/kirby transparente.png" alt="cara de kirby" style="width: 100%;">
+        </figure>
+        <article style="width: 70%; background-color: aliceblue;">
+            <p style="font-size: larger; margin: 20px; text-align: justify;">
+                <b>Kirby</b> (<i><b>カービイ</b></i> <i>Kābī</i> en Japonés)
+                 es un personaje de la gran empresa Nintendo y protagonista de una serie de juegos con su mismo nombre. 
+                 Fue creado por Masahiro Sakurai. Hizo su primera aparición en 1992 en la consola portátil de Game Boy. 
+                 Desde ese entonces Kirby apareció en diferentes consolas con juegos en 2D hasta que salió Kirby 64: The Crystal Shards, 
+                 donde se puede apreciar a Kirby en 3D. Kirby también cuenta con una serie de anime: Kirby: Right Back at Ya!, 
+                 que salió al aire el 6 de octubre de  2001. Es reconocido por su forma redonda y su característico color rosado.
+            </p>
+            <section style="text-align: center; margin-top: 20px;">
+                <img src="https://www.pngmart.com/files/23/Kirby-PNG-Isolated-HD.png" alt="Kirby feliz" style="width:100px; margin: 10px;">
+                <img src="https://www.pikpng.com/pngl/b/579-5794086_kirby-super-star-ultra-png-download-kirby-warp.png" alt="Kirby volando" style="width:100px; margin: 10px;">
+                <img src="https://i.redd.it/zer1umlp4na41.png" alt="Kirby comiendo" style="width:100px; margin: 10px;">
+            </section>
+        </article> 
+    </main>
+    <footer>Todos los derechos reservados &reg;</footer>
+</body>
+</html>
