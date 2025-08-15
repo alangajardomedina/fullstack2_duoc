@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ya vete del ciber</title>
+    <link rel="icon" href="assets/img/Dragon_Ball_Z_AL.webp">
+    <style>
+        body {
+            background-image: url('assets/img/fondo.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;           
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="color:white; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">¿CUÁL ES TU GUERRERO Z FAVORITO?</h1>
+        <p style="color: white;">¡Acá puedes visualizar las mejores postales de tus guerreros Z favoritos!</p>
+    </header>
+    <nav>
+ 
+    </nav>
+    <main>  
+        <select name="guerreros" id="guerreros">
+            <option value="primero">Selecciona tu guerrero Z favorito</option>
+            <option value="goku">Goku</option>
+            <option value="vegeta">Vegeta</option>
+            <option value="gohan">Gohan</option>
+            <option value="piccolo">Piccolo</option>
+            <option value="krilin">Krilin</option>
+            <option value="yamcha">Yamcha</option>
+            <option value="ten">Ten Shin Han</option>
+            <option value="todos">Todos</option>
+        </select>
+        <br>
+        <br>
+        <div id="contenedor-imagen">
+            <img id="imagen-guerrero" src="assets/img/dragon.webp" alt="dragon" width="350px">
+        </div>
+
+        <script>
+            const select = document.getElementById("guerreros");
+            const imagen = document.getElementById("imagen-guerrero");
+
+            const imagenes = {
+                goku:"assets/img/goku.jpg",
+                vegeta:"assets/img/vegeta.jpeg",
+                gohan:"assets/img/gohan.jpeg",
+                piccolo:"assets/img/piccolo.jpg",
+                krilin:"assets/img/krillin.jpg",
+                yamcha:"assets/img/yamcha.jpg",
+                ten:"assets/img/ten.jpg",
+                todos:"assets/img/todos.jpeg"
+            };
+
+            select.addEventListener("change", function () {
+                const valor = this.value;
+
+                if (imagenes[valor]) {
+                    imagen.src = imagenes[valor];
+                    imagen.alt = valor;
+                } else {
+                    imagen.src = "assets/img/dragon.webp";
+                    imagen.alt = "dragon";
+                }
+            });
+        </script>
+
+    </main>
+
+    <footer style="padding: 150px">
+        <center><p style="color: white; background-color: rgba(0, 0, 0, 0.5);">LA PROGRAMACIÓN ES MI PASIÓN</p>
+        <p style="color: white; background-color: rgba(0, 0, 0, 0.5);">Todos los derechos reservados &reg;</p></center>
+    </footer>
+</body>
+</html>
