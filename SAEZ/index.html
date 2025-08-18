@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cumpleaños Pokémon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/img/pokeball.png">
+</head>
+<body>
+  <header>
+    <h1>Ve tu Pokémon por fecha de Nacimiento</h1>
+  </header>
+
+  <main>
+    <form id="picker" aria-describedby="ayuda">
+      <fieldset>
+        <legend>Elige tu día y mes de Nacimiento</legend>
+
+        <label for="day">Día:</label>
+        <input id="day" name="day" type="number" min="1" max="31" value="1" required>
+
+        <label for="month">Mes:</label>
+        <select id="month" name="month" required>
+          <option value="1" selected>Enero</option>
+          <option value="2">Febrero</option>
+          <option value="3">Marzo</option>
+          <option value="4">Abril</option>
+          <option value="5">Mayo</option>
+          <option value="6">Junio</option>
+          <option value="7">Julio</option>
+          <option value="8">Agosto</option>
+          <option value="9">Septiembre</option>
+          <option value="10">Octubre</option>
+          <option value="11">Noviembre</option>
+          <option value="12">Diciembre</option>
+        </select>
+        <button type="submit" id="go">Calcular</button>
+      </fieldset>
+    </form>
+
+    <figure id="result" aria-busy="false">
+      <img id="art" src="assets/img/pokeball.png" alt="Pokébola de inicio" />
+      <figcaption>
+        <pre id="info" role="status" aria-live="polite">Aquí aparecerá tu Pokémon.</pre>
+      </figcaption>
+    </figure>
+  </main>
+
+    <footer>
+        <p>Todos los derechos ¿reservados? &reg;</p> <!-- me demanda nintendo -->
+    </footer>
+
+  <script>
+    const monthTypes = {
+      1:  ["fire", "dragon"],       // Enero
+      2:  ["psychic"],              // Febrero
+      3:  ["electric", "grass"],    // Marzo
+      4:  ["rock", "ice"],          // Abril
+      5:  ["water"],                // Mayo
+      6:  ["flying", "ground"],     // Junio
+      7:  ["bug"],                  // Julio
+      8:  ["fighting", "dark"],     // Agosto
+      9:  ["ghost"],                // Septiembre
+      10: ["poison", "steel"],      // Octubre
+      11: ["normal"],               // Noviembre
+      12: ["fairy", "dragon"]       // Diciembre
+    };
+
+    const MAX_ID = 1025; // borrar id raros
+
+    const getIdFromUrl = (url) => {
+      const m = url.match(/\/pokemon\/(\d+)\/?$/);  // saca url
+      return m ? Number(m[1]) : null;
+    };
+
+    const cap = s => s.charAt(0).toUpperCase() + s.slice(1);  //mayuscula primera
+
+    async function fetchTypeList(typeName) {  // busca lista por tipo
+      const res = await fetch(`https://pokeapi.co/api/v2/type/${typeName}`);
+      if (!res.ok) throw new Error(`Error al cargar type/${typeName}`);
+      const data = await res.json();
+      return data.pokemon
+        .map(p => ({ id: getIdFromUrl(p.pokemon.url), name: p.pokemon.name, url: p.pokemon.url }))
+        .filter(p => p.id && p.id <= MAX_ID);
+    }
+
+    function divisorForDay(d) { 
+      if (d <= 7) return 1;
+      if (d > 7 && d < 14) return 2;
+      if (d >= 14 && d < 21) return 3;
+      return 4; // d >= 21
+    }
+
+    function choosePokemonByDate(list, day) {
+      const div = divisorForDay(day);
+      const G = Math.max(1, Math.round(list.length / div)); // ve la cantidad de pokemon
+
+      const start = Math.floor((list.length - G) / 2); // saca de donde empezar
+      const block = list.slice(start, start + G); 
+
+      const idx = day % block.length; 
+      return { chosen: block[idx], indexInBlock1Based: idx + 1, G, divisor: div, N: list.length }; // devuelve el pokemon asegurado ? %%
+    }
+
+    async function fetchPokemonDetails(urlOrId) { // carga los detalles del pokemon
+      const url = typeof urlOrId === 'number'
+        ? `https://pokeapi.co/api/v2/pokemon/${urlOrId}`
+        : urlOrId;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('No se pudo cargar el Pokémon');
+      return res.json();
+    }
+
+    function getArtworkFromDetails(details) { // saca la img de pokemon
+      const sprites = details.sprites || {};
+      const other = sprites.other || {};
+      return (
+        (other['official-artwork'] && other['official-artwork'].front_default) ||
+        (other['dream_world'] && other['dream_world'].front_default) ||
+        sprites.front_default ||
+        null
+      );
+    }
+
+    async function run() {
+      const day = Number(document.getElementById('day').value);
+      const month = Number(document.getElementById('month').value);
+      const info = document.getElementById('info');
+      const img = document.getElementById('art');
+
+      info.textContent = 'Calculando...';
+      img.src = '';
+      img.alt = 'Cargando...';
+
+      try {
+        const types = monthTypes[month];
+        if (!types || types.length === 0) {
+          info.textContent = "No hay tipos definidos para este mes.";
+          return;
+        }
+
+        // carga los tipos de pokemon
+        const lists = await Promise.all(types.map(fetchTypeList));
+        const mergedMap = new Map();
+        for (const arr of lists) {
+          for (const p of arr) mergedMap.set(p.id, p); // dedup por id
+        }
+        const merged = Array.from(mergedMap.values()).sort((a, b) => a.id - b.id);
+
+        if (merged.length === 0) {
+          info.textContent = "No se encontraron Pokémon para esos tipos.";
+          img.alt = 'Sin imagen';
+          return;
+        }
+
+        const { chosen, indexInBlock1Based, G, divisor, N } = choosePokemonByDate(merged, day);
+
+        //saca la imagen del pokemon
+        const details = await fetchPokemonDetails(chosen.id);
+        const art = getArtworkFromDetails(details);
+
+        // muestra la img
+        if (art) {
+          img.src = art;
+          img.alt = `Artwork de ${cap(chosen.name)}`;
+        } else {
+          img.alt = 'Sin imagen disponible';
+        }
+
+        //info 
+        info.textContent =
+          `Mes: ${month} | Tipos: ${types.join(" + ")}\n` +
+          `Total De Pokemon: ${N}\n` +
+          `Día: ${day} → divisor = ${divisor}\n` +
+          `Tu bloque de Pokemon = ${G}\n` +
+          `Elegido: #${chosen.id} ${cap(chosen.name)} (posición ${indexInBlock1Based} dentro del bloque de ${G})\n` +
+          `URL: https://pokeapi.co/api/v2/pokemon/${chosen.id}`;
+      } catch (e) {
+        info.textContent = "Error: " + e.message;
+        img.alt = 'Error';
+      }
+    }
+
+    document.getElementById('picker').addEventListener('submit', (ev) => {
+      ev.preventDefault(); // no recargar la página
+      const day = Number(document.getElementById('day').value);
+      const month = Number(document.getElementById('month').value);
+      if (!Number.isInteger(day) || day < 1 || day > 31) return;
+      run();
+    });
+  </script>
+</body>
+</html>
