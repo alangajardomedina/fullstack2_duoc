@@ -9,7 +9,7 @@
     <style>
         header{
             margin: 0px;
-            background-color: lightpink;
+            background-color: #ffb0d0;
             color: rgb(185, 21, 57);
             font-weight: bold;
             font-size: 28px;
@@ -23,15 +23,50 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            background: #ffe6f0;
+            background: radial-gradient(
+                ellipse at center,
+                #ffe6f0 20%,
+                #e97da8 90%,
+                #e76699 100%
+            );
             background-attachment: fixed;
+            overflow-x: hidden;
         }
 
-        main{
-            margin: 20px;
-            height: 100%;
+        main {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
             width: 100%;
-            justify-items: center;
+            box-sizing: border-box;
+            gap: 20px;
+        }
+
+        figure {
+            margin: 0 0 20px 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        figure img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        article {
+            width: 80%;
+            min-width: 250px;
+            max-width: 1000px;
+            background-color: aliceblue;
+            border-radius: 20px;
+            box-shadow: 2px 2px 17px 5px rgba(228, 108, 188, 0.384);
+            box-sizing: border-box;
+            margin: 0 auto;
+            flex: none;
         }
 
         footer {
@@ -42,12 +77,12 @@
             justify-content: center;
             place-items: center;
             display: grid;
-            margin-top: auto;
+            margin-top: 50px;
             box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.452);
         }
 
         a {
-            background-color: lightpink;
+            background-color: #ffb0d0;
             padding: 8px 15px;
             border-radius: 20px;
             text-decoration: none;
@@ -57,6 +92,11 @@
 
         a:hover {
             background-color: rgb(255, 200, 220);
+            transform: scale(1.1);
+        }
+
+        a:focus {
+            background-color: rgb(255, 139, 182);
             transform: scale(1.1);
         }
 
@@ -74,6 +114,38 @@
 
         h2{
             margin: 5px;
+            font-size: larger;
+            text-align: center;
+            font-weight: bolder;
+            font-size: xx-large;
+            color: rgb(185, 21, 57);
+        }
+
+        h3{
+            margin: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 23px;
+            color: rgb(185, 21, 57);
+        }
+
+        p{
+            font-size: larger;
+            margin: 20px;
+            text-align: justify;
+        }
+
+        ul{
+            font-size: larger;
+            margin: 20px;
+            text-align: justify;
+        }
+
+        @media (max-width: 900px) {
+            article {
+                width: 100%;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -86,11 +158,12 @@
         <a style="justify-items: right; padding-right: 20px;" href="/index.html"><h2>Salir</h2></a>
     </header>
     <main>
-        <figure style="margin: 30px; width: 30%;">
+        <figure>
             <img src="assets/img/kirby transparente.png" alt="cara de kirby" style="width: 100%;">
         </figure>
-        <article style="width: 70%; background-color: aliceblue;">
-            <p style="font-size: larger; margin: 20px; text-align: justify;">
+        <article >
+            <h2>Origen</h2>
+            <p>
                 <b>Kirby</b> (<i><b>カービイ</b></i> <i>Kābī</i> en Japonés)
                  es un personaje de la gran empresa Nintendo y protagonista de una serie de juegos con su mismo nombre. 
                  Fue creado por Masahiro Sakurai. Hizo su primera aparición en 1992 en la consola portátil de Game Boy. 
@@ -98,12 +171,118 @@
                  donde se puede apreciar a Kirby en 3D. Kirby también cuenta con una serie de anime: Kirby: Right Back at Ya!, 
                  que salió al aire el 6 de octubre de  2001. Es reconocido por su forma redonda y su característico color rosado.
             </p>
-            <section style="text-align: center; margin-top: 20px;">
-                <img src="https://www.pngmart.com/files/23/Kirby-PNG-Isolated-HD.png" alt="Kirby feliz" style="width:100px; margin: 10px;">
-                <img src="https://www.pikpng.com/pngl/b/579-5794086_kirby-super-star-ultra-png-download-kirby-warp.png" alt="Kirby volando" style="width:100px; margin: 10px;">
-                <img src="https://i.redd.it/zer1umlp4na41.png" alt="Kirby comiendo" style="width:100px; margin: 10px;">
+            <p>
+                <b>Kirby</b> incursionó en la consola <b>Game Boy</b>, donde cosechó un gran éxito, 
+                pero al ser una consola en blanco y negro se desconocía el verdadero color de Kirby. 
+                Sakurai quería que el personaje fuera de color rosa, mientras que los demás desarrolladores 
+                lo veían como un personaje de color amarillo o de color blanco. Finalmente la idea de 
+                Sakurai ganó y Kirby fue mostrado de color rosa en la portada del juego japonés, sin embargo, 
+                en Estados Unidos, Kirby salió en la portada sin ningún color y completamente en blanco. 
+                No fue hasta el lanzamiento de Kirby's Adventure en el continente Americano que Kirby por fin 
+                salió de color rosa.
+            </p>
+        </article> 
+        <section style="text-align: center; margin-top: 20px;">
+            <img src="https://www.pngmart.com/files/23/Kirby-PNG-Isolated-HD.png" alt="Kirby feliz" style="width:100px; margin: 10px;">
+            <img src="https://www.pikpng.com/pngl/b/579-5794086_kirby-super-star-ultra-png-download-kirby-warp.png" alt="Kirby volando" style="width:100px; margin: 10px;">
+            <img src="https://i.redd.it/zer1umlp4na41.png" alt="Kirby comiendo" style="width:100px; margin: 10px;">
+        </section>
+        <article>
+            <h2>Juegos</h2>
+            <h3>La Saga Kirby: Un Viaje Cronológico por el Universo de la Bola Rosa</h3>
+            <p>
+                Explora la evolución de Kirby a través de sus títulos principales y spin-offs, 
+                ordenados cronológicamente por año de lanzamiento y consola.
+            </p>
+
+            <h3>Serie Principal</h3>
+            <ul>
+                <li><b>Kirby's Dream Land</b> (1992, Game Boy)</li>
+                <li><b>Kirby's Adventure</b> (1993, NES)</li>
+                <li><b>Kirby's Dream Land 2</b> (1995, Game Boy)</li>
+                <li><b>Kirby Super Star</b> (1996, Super Nintendo)</li>
+                <li><b>Kirby's Dream Land 3</b> (1997, Super Nintendo)</li>
+                <li><b>Kirby 64: The Crystal Shards</b> (2001, Nintendo 64)</li>
+                <li><b>Kirby: Nightmare in Dream Land</b> (2002, Game Boy Advance)</li>
+                <li><b>Kirby Air Ride</b> (2003, Nintendo Game Cube)</li>
+                <li><b>Kirby and the Amazing Mirror</b> (2004, Game Boy Advance)</li>
+                <li><b>Kirby Canvas Curse</b> (2005, Nintendo DS)</li>
+                <li><b>Kirby Squeak Squad</b> (2007, Nintendo DS)</li>
+                <li><b>Kirby Super Star Ultra</b> (2008, Nintendo DS)</li>
+                <li><b>Kirby's Epic Yarn</b> (2010, Wii)</li>
+                <li><b>Kirby Mass Attack</b> (2011, Nintendo DS)</li>
+                <li><b>Kirby's Return to Dream Land</b> (2011, Wii)</li>
+                <li><b>Kirby's Dream Collection Special Edition</b> (2012, Wii)</li>
+                <li><b>Kirby Triple Deluxe</b> (2014, Nintendo 3DS)</li>
+            </ul>
+
+            <h3>Spin-offs</h3>
+            <ul>
+                <li><b>Kirby's Pinball Land</b> (1993, Game Boy)</li>
+                <li><b>Kirby Block Ball</b> (1995, Game Boy)</li>
+                <li><b>Kirby's Dream Course</b> (1995, Super NES)</li>
+                <li><b>Kirby's Avalanche</b> (1995, Super NES)</li>
+                <li><b>Kirby's Star Stacker</b> (1997, Game Boy)</li>
+                <li><b>BS Kirby no Omochabako Baseball</b> (1995, Super NES)</li>
+                <li><b>Kirby No Kira Kira Kids</b> (1997, Super NES)</li>
+                <li><b>Kirby: Tilt 'n' Tumble</b> (2000, Game Boy Color)</li>
+            </ul>
+
+            <h3>Otras Apariciones y Medios</h3>
+
+            <ul>
+                <li><b>Super Smash Bros.</b> (1999, Nintendo 64) - Kirby como personaje jugable.</li>
+                <li><b>Super Smash Bros. Melee</b> (2001, GameCube) - Kirby como personaje jugable.</li>
+                <li><b>Super Smash Bros. Brawl</b> (2008, Wii) - Kirby y otros personajes de Kirby como jugables.</li>
+                <li><b>Super Mario World 2: Yoshi's Island</b> (1995, Super NES) - Aparición de un enemigo similar a Kirby.</li>
+                <li><b>Yoshi's Island DS</b> (2006, Nintendo DS) - Aparición de un enemigo similar a Kirby.</li>
+                <li><b>The Legend of Zelda: Link's Awakening</b> (1993, Game Boy) - Kirby como un enemigo en la Torre del Águila.</li>
+                <li><b>Hoshi no Kirby (Kirby)</b> (1997, Anime TV) - Serie de anime.</li>
+            </ul>
+            <h3>¡Estos son mis juegos favoritos!</h3>
+            
+            <section style="text-align: center; margin-top: 20px; margin-bottom: 20px; display: flex; flex-wrap: wrap; justify-content: center;">
+                <div style="margin: 10px; text-align: center;">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/1/1d/Kirbytstest.jpg" alt="Kirby: Triple Deluxe" style="border-radius: 50px; height: 200px; margin-bottom: 2px;">
+                    <p style="margin-top: 2px; font-weight: bolder; width: 170px; text-align: center;"><b>Kirby Triple Deluxe</b> (2014, Nintendo 3DS)</p>
+                </div>
+                <div style="margin: 10px; text-align: center;">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Robobotboxart.png" alt="Kirby: Planet Robobot" style="border-radius: 50px; height: 200px; margin-bottom: 2px;">
+                    <p style="margin-top: 2px; font-weight: bolder; width: 170px; text-align: center;"><b>Kirby Plannet Robobot</b> (2016, Nintendo 3DS)</p>
+                </div>
+                <div style="margin: 10px; text-align: center;">
+                    <img src="https://static.fnac-static.com/multimedia/Images/ES/NR/77/47/15/1394551/1540-1/tsp20170915170415/Kirby-Battle-Royale-Nintendo-3DS.jpg" alt="Kirby: Battle Royale!" style="border-radius: 50px; height: 200px; margin-bottom: 2px;">
+                    <p style="margin-top: 2px; font-weight: bolder; width: 170px; text-align: center;"><b>Kirby Battle Royale</b> (2018, Nintendo 3DS)</p>
+                </div>
+                <div style="margin: 10px; text-align: center;">
+                    <img src="https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_5/SQ_NSwitch_KirbyAndTheForgottenLand_onlylogo_esES_image380w.jpg" alt="Kirby: y la tierra olvidada" style="border-radius: 50px; height: 200px; margin-bottom: 2px;">
+                    <p style="margin-top: 2px; font-weight: bolder; width: 170px; text-align: center;"><b>Kirby y la tierra olvidada</b> (2022, Nintendo Switch)</p>
+                </div>
+                <div style="margin: 10px; text-align: center;">
+                    <img src="https://media.vandal.net/m/65547/mas-kirby-en-el-reino-de-los-hilos-20193112314829_30.jpg" alt="Kirby: Epic Yarn" style="border-radius: 50px; height: 200px; margin-bottom: 2px;">
+                    <p style="margin-top: 2px; font-weight: bolder; width: 170px; text-align: center;"><b>Kirby Epic Yarn</b> (2010, Nintendo 3DS)</p>
+                </div>
             </section>
         </article> 
+        <img src="https://i.pinimg.com/originals/2f/c1/b8/2fc1b8f82e14172e3bcae39ca8c8ab33.gif" alt="Kirby-sombrilla" style="width:150px;">
+        <article>
+            <h2>¡Curiosidades!</h2>
+            <ul>
+                <li><strong>Parodia Azulada:</strong> ¡Imagínate a Kirby de color azul! Así lo parodiaron en un segmento del famoso programa <em>MAD</em>. 💙</li>
+                <li><strong>¡Medidas Oficiales!:</strong> Según su ficha en <em>Super Smash Bros.</em>, ¡Kirby mide 8 pulgadas (aproximadamente 20.32 cm)! 📏</li>
+                <li><strong>Duelo Icónico:</strong> En el modo 'Emisario Subespacial', la primera batalla es un épico Kirby vs. Mario, representando las creaciones cumbre de Masahiro Sakurai y Shigeru Miyamoto. 🥊</li>
+                <li><strong>Presencia Virtual:</strong> ¡Kirby también se cuela en el mundo virtual! Puedes encontrarlo como mascota y traje en la plataforma <em>IMVU</em>. 🤖</li>
+                <li><strong>El Poder de la Espada:</strong> La habilidad de Espada de Kirby es un guiño a Link de <em>The Legend of Zelda</em>. ¡En <em>Kirby: Planet Robobot</em>, usar el amiibo de Link te otorga esta icónica transformación! ⚔️🔗</li>
+                <li><strong>Flexibilidad Extrema:</strong> ¡Kirby desafía las leyes de la física! En el episodio 2 del anime, tras ser aplastado repetidamente por Blocky, no sufre daño y queda plano como una hoja de papel. ¡Increíble! 📄💥</li>
+                <li><strong>Cameo Cinematográfico:</strong> En <em>Mario & Luigi: Superstar Saga</em>, dentro del Teatro de Yoshis, un póster muestra a Kirby surcando los cielos en su Warp Star con el título 'KIRBY STORY'. ¿Una película o obra teatral sobre su vida? ¡Un guiño fascinante! 🎬⭐</li>
+                <li><strong>La Voz Detrás de Kirby:</strong> La talentosa Makiko Ōmoto, voz de Kirby, también ha dado vida a otros personajes memorables como Ness (EarthBound), Lyn (Fire Emblem), Viridi (Kid Icarus: Uprising) y Sayaka Maizono (Danganronpa). 🎤</li>
+                <li><strong>Cómic Polémico:</strong> ¡Un cómic alemán oficial de Kirby lo mostró fumando y leyendo una revista para adultos! El autor lo hizo por pura antipatía hacia Kirby y Masahiro Sakurai. ¡Una curiosidad bastante inesperada y oficial! 🔞🚬</li>
+            </ul>
+        </article>
+        <section style="justify-items: center;">
+            <img src="https://i.pinimg.com/originals/c0/9a/97/c09a97a8f18cb8908ea897639cbe4fa8.gif" alt="Kirby-durmiendo" style="height: 130px; margin-bottom: 0px;">
+            <h2 style="margin-top: 0px;">¡Gracias por leer!</h2>
+        </section>
     </main>
     <footer>Todos los derechos reservados &reg;</footer>
 </body>
