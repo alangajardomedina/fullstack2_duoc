@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ara Cosas</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('assets/img/fondo2.gif'); /* fondo rosa pastel */
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;        /* altura completa de la pantalla */
+      display: flex;
+      justify-content: center;   /* centra horizontalmente */
+      align-items: center;       /* centra verticalmente */
+      color: #333;
+    }
+    header{
+      text-align: center;
+      background: #eed0df; /* rosado pastel */
+      padding: 2rem;
+    }
+
+    nav a {
+      display: inline-block;       /* para poder poner padding */
+      background-color: #a54968;   /* color de fondo del botón */
+      color: white;                /* texto blanco */
+      padding: 0.5rem 1.5rem;        /* espacio interno */
+      border-radius: 8px;          /* bordes redondeados */
+      margin: 0.5rem;            /* espacio entre botones */
+      transition: background 0.3s; /* efecto suave al pasar el mouse */
+    }
+
+    nav a:hover {
+      background-color: #73a04e;   /* cambia de color al pasar el mouse */
+    }
+
+    section {
+        text-align: center;
+        background: #eed0df; /* rosado pastel */
+        padding: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .white-container {
+      max-width: 900px;
+      width: 90%;
+      background: #fff; /* recuadro blanco */
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin-top: 3rem; /* espacio arriba */
+      margin-bottom: 3rem; /* espacio abajo */
+    }
+
+    .pink-container {
+      /* ffe5f2 */
+      background: #eed0df; /* recuadro rosado dentro */
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(156, 0, 0, 0.1);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 8px 15px rgba(156, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="white-container">
+    <div class="pink-container">
+
+      <header>
+        <h1>- 🌷 Cositas Interesantes 🌷 - </h1>
+        <h2>Una pequeña coleccion de insectos, animales marinos y flores.</h2>
+        <p>
+          ¡Hola! Bienvenid@ a mi página dedicada a las maravillas de la naturaleza. 
+          Aquí me gustaría mostrar algunos de mis insectos, animales marinos y plantas favoritos, 
+          ya que soy aficionada a algunos bichitos y criaturas muy interesantes, 
+          al igual que a ciertas plantas. 
+        </p>
+        
+        <p>
+          Durante las estaciones más cálidas del año, me gusta salir a caminar y observar la naturaleza. 
+          En mis paseos he encontrado bichitos que me inspiran a aprender más sobre ellos, 
+          así como flores muy bonitas que luego me gusta poner en libros para secarlas 
+          y guardar en mi colección. 
+        </p>
+        
+        <p>
+          También me gusta encontrar conchitas de caracol deshabitadas 
+          y guardarlas en mi otra colección. 
+          Espero que disfrutes de esta pequeña muestra tanto como yo disfruto de ver y aprender sobre
+          las pequeñas cosas de la naturaleza. 
+        </p>
+        
+        <nav>
+          <a href =#animales>Animales</a> 
+          <a href =#insectos>Insectos</a> 
+          <a href =#flores>Flores</a> 
+        </nav>
+      </header>
+    
+      <main>
+  
+  <!--Seccion Animales-->
+        <section id="animales">
+          <h2>Animales</h2>
+          <div class="grid">
+  
+            <div class="card">
+              <article>
+                <img src="assets/img/Sepia.webp" alt="Sepia">
+                <h3>Sepia</h3>
+              </article>
+            </div>
+    
+            <div class="card">
+              <article>
+                <img src="assets/img/Leafslug.webp" alt="Leaf Slug">
+                <h3>Leaf Slug</h3>
+  
+              </article>
+            </div>
+    
+            <div class="card">
+              <article>
+                <img src="assets/img/Cliónidos.jpg" alt="Clionidos">
+                <h3>Cliónidos</h3>
+              </article>
+            </div>
+          </div>
+        </section>
+    
+  <!--Seccion Insectos-->
+        <section id="insectos">
+          <h2>Insectos</h2>
+          <div class="grid">
+            <div class="card">
+              <article>
+                <img src="assets/img/PolilladeSeda.jpg" alt="Polilla de Seda">
+                <h3>Polilla Rosada del Arce</h3>
+              </article>
+            </div>
+    
+            <div class="card">
+              <article>
+                <img src="assets/img/AranaFlor.webp" alt="Araña Flor">
+                <h3>Epicadus Heterogaster</h3>
+              </article>
+            </div>
+    
+            <div class="card">
+              <article>
+                <img src="assets/img/Abejorro (1).jpg" alt="Abejorro">
+                <h3>Bombus terrestris</h3>
+              </article>
+            </div>
+          </div>
+        </section>
+  
+  <!--Seccion Flores-->
+        <section id="flores">
+          <h2>Flores</h2>
+          <div class="grid">
+            <div class="card">
+              <article>
+                <h3>Sepia</h3>
+              </article>
+            </div>
+    
+            <div class="card">
+              <article>
+                <h3>Sepia</h3>
+              </article>
+            </div>
+    
+            <div class="card">
+              <article>
+                <h3>Sepia</h3>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>© 2025 Ara Cosas. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+
+  </div>
+  
+</body>
+</html>
