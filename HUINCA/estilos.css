@@ -1,0 +1,41 @@
+
+        /*Selector general*/
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 1;
+            padding: 0;
+        }
+
+        header{
+            background-color: rgb(151, 218, 160);
+        }
+
+        .btn-contacto{
+            background-color: rgb(151, 218, 160);
+            color: black;
+            border-radius: 12px;
+            border-color: cadetblue;
+            font-size: 15px;
+        }
+        .btn-contacto:hover{
+            background-color: rgb(34, 139, 13);
+        }
+
+        nav ul{
+            display: flex; /* Con este ajuste se permiten ajustes mas flexibles, o si no quedarian como el principio*/
+            justify-content: space-between; /* Esto hace una separacion igualitaria de los items: Inicio, menú y contacto*/
+        }
+
+        @media(max-width:705px){
+            .btn-contacto{
+                font-size: 15px;
+            }
+        }
+        @media(max-width:705px){
+            nav ul{
+                display: block;
+                justify-content: center;
+            }
+        }
+
+
