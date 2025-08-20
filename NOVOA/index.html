@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Selector general*/
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: green;
+
+        }
+        header h1{
+            color: rgb(255,0,255,0.5)
+        }
+        .btn-contacto{
+            background-color: greenyellow;
+            color:white;
+            border-radius: 5px;
+            border-color: black;
+            font-size: 50px;
+        }
+        .btn-contacto:hover{
+            background-color: rgb(5, 54, 5);
+        }
+        nav ul{
+            display: flex;
+            justify-content:space-between;
+            align-items: end;
+        }
+        @media(max-width:750px){
+            .btn-contacto{
+                font-size: 50px;
+            }
+        }
+        @media(max-width:400px){
+            nav {
+                display: block;
+                justify-content: center;
+                align-items: center;
+            }
+            nav ul {
+                display: block;
+            } 
+
+        }
+
+    
+    </style>
+</head>
+<body>
+<header style="background-color: green;">
+    <h1 style="font-size: 50px;">bienvenido </h1>
+</header>
+<nav>
+    <!--ul>li*3 a-->
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Meú</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+</nav>
+    <main>
+        <section>
+            <h2>Bienvenid</h2>
+            <p>MUEJJEJEJEJE</p>
+            <button class="btn-contacto">Enviar menaje</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 si</p>
+
+    </footer>
+</body>
+</html>
