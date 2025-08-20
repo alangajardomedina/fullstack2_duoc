@@ -1,0 +1,36 @@
+body{font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding: 0;
+    }
+    header{
+        background-color: rgb(255, 0, 0);
+    }
+    header h1{
+        color: blueviolet;
+        font-size: 50xp;
+        
+    }
+    .btn-Contacto{
+        background-color: greenyellow;
+        color: rgba(5, 9, 236, 0.61);
+        border-radius: 5px;
+        border-color: rgba(13, 151, 8, 0.808);
+        font-size: 20px;
+ 
+    }
+    .btn-Contacto:hover{
+        background-color: green;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    @media(max-width:7005px){
+
+    }
+    @media(max-width: 400px){
+        nav ul{
+            display: block;
+        }
+    }
