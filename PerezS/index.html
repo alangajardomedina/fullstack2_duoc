@@ -6,148 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Honkai Star Rail</title>
     <link rel="icon" href="./assets/img/icon star rail.png">
-
-
-
-
-
-     <!-- estilo de la pagina -->
-    <style>
-        
-        body {
-            margin: 0; /* quita el margen*/
-            font-family: Arial, sans-serif; /* estilo de letra*/
-            background-image: url('./assets/img/fondo tren star rail.png');
-            background-repeat: no-repeat; /* no se repite la imagen*/
-            background-size: cover; /* fondo - toda la pantalla*/
-            background-position: center; /* centra*/
-            background-attachment: fixed; /* fondo fijo*/
-            color: white; /* no se . innecesario*/
-        }
-
-        /* gif inicial*/
-        #logo-gif {
-            position: fixed; /*fijo*/
-            top: 0;
-            left: 0;
-            width: 100%; /*ancho*/
-            height: 100%; /*alto*/
-            z-index: 1000; /*no me acuerdo */
-            background: black; /*fondo*/
-            display: flex; /* no me acuerdo*/
-            justify-content: center; /*centra horizontal*/
-            align-items: center; /*centra vertical*/
-            flex-direction: column; /* algo en columna*/
-        }
-
-        /* contenido principal -oculto al inicio */
-        #contenido {
-            display: none; /*no se ve hasta que carga*/
-            text-align: center; /*centra*/
-            padding: 20px; 
-            padding-bottom: 70px; /* espacio para que no tape lo de abajo */
-        }
-
-        /* Botón */
-        #contenedor-boton {
-            display: flex; /*centra*/
-            justify-content: center; /*centra horizontal*/
-            align-items: center; /*centra vertical*/
-            height: 100vh; /* altura de la pantalla */
-            flex-direction: column;
-        }
-
-        /* estilo del botón */
-        .boton-colorido {
-            position: relative; /*borde animado sobre el botón*/
-            display: inline-block;
-            padding: 15px 40px; /*algo del espacio*/
-            font-size: 18px; /*tamaño texto*/
-            font-weight: bold; 
-            border: none; 
-            border-radius: 50px; /*ovalado*/
-            color: white; /*color del texto*/
-            background: black; /*fondo*/
-            cursor: pointer; /*manito al colocarse*/
-            z-index: 1; /* boton sobre borde animado*/
-            overflow: hidden; /*lo que sobra, lo recorta*/
-        }
-         /* borde animado del botón */
-        .boton-colorido::before {
-            content: ''; /* no se*/
-            position: absolute; /*posicion absoluta sobre el botón*/
-            top: -3px;
-            left: -3px;
-            right: -3px;
-            bottom: -3px;
-            border-radius: 50px; /*borde redondeado*/
-            background: linear-gradient(270deg, green, cyan, blue, violet);
-            background-size: 600% 600%; /*que se muevan los colores*/
-            z-index: -1; /*debajo del botón*/
-            animation: moverColores 4s linear infinite; /*animación infinita*/
-        }
-         /* animacion borde de los colores*/
-        @keyframes moverColores {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                 background-position: 100% 50%;
-            }
-
-            100% {
-                  background-position: 0% 50%;
-            }
-        }
-
-        /* GIF herta oculto hasta que se haga click */
-        #gif-mostrado {
-            margin-top: 20px; /*separación del botón*/
-            display: none; /*oculto al inicio*/
-        }
-
-        /* pie de pagina - derechos de la pagina -*/
-        footer {
-            position: fixed; /*siempre visible abajo*/
-            bottom: 0; /*pegado al fondo*/
-            left: 0;
-            width: 100%; /*ocupa todo el ancho*/
-            text-align: center; /*centra*/
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.7); /*fondo semitransparente*/
-            font-size: 14px; /*tamaño texto*/
-        }
-    </style>
+    <link rel="stylesheet" href="estilos.css">
 </head>
-
 
 <body>
 
-    <!-- GIF de carga inicial-->
+    <!-- GIF de carga inicial -->
     <div id="logo-gif">
         <img src="./assets/img/star rail logo gif.webp" alt="Logo animado" width="200px">
     </div>
- 
-     <!-- -->
-    <nav style="background-color: rgba(0, 0, 0, 0.226);"> 
-        <u1> 
-             <ul>
-                <li style="color: blueviolet;"><a href="INICIO">Inicio</a></li>
-                <li style="color: blueviolet;"><a href="MENU"></a>Menú</li>
-                <li style="color: blueviolet;"><a href="CONTACTO"></a>Contacto</li>
-             </ul>
 
-        </u1>
-
-
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="https://youtu.be/xsvZOUnXdWM">Contacto</a></li>
+            <li><a href="#">proximamente</a></li>
+        </ul>
     </nav>
-    
 
-
-
-
-    <!-- Contenido principal - un logo- -->
+    <!-- Contenido principal -->
     <div id="contenido">
         <main>
             <img src="./assets/img/logo oficial star rail.png" alt="logo" width="200px">
@@ -165,33 +43,28 @@
         </section>
     </div>
 
-    <!-- pie de la pagina -->
+    <!-- Pie de la página -->
     <footer>
         <p>Todos los derechos reservados &reg;</p>
     </footer>
 
-   <script>
-         /*muestra el contenido despues de 3 segundos de carga*/
-        window.onload = function() {
-            /* Guardamos el GIF de carga y el contenido principal*/
+    <script>
+        // Muestra el contenido después de 3 segundos de carga
+        window.onload = function () {
             var gifCarga = document.getElementById('logo-gif');
             var contenido = document.getElementById('contenido');
 
-            
-            setTimeout(function() {
-                
-                gifCarga.style.display = 'none'; /* oculta gif de carga*/
-               
-                contenido.style.display = 'block'; /*muestra contenido principal*/
-            }, 3000); /* 3000 milisegundos = 3 segundos */
+            setTimeout(function () {
+                gifCarga.style.display = 'none';
+                contenido.style.display = 'block';
+            }, 3000);
         }
-              /*muestra el gif de herta al hacer click*/
+
+        // Muestra el gif de Herta al hacer click
         function mostrarGif() {
             document.getElementById('gif-mostrado').style.display = 'block';
         }
-
-   </script>
+    </script>
 
 </body>
-
 </html>
