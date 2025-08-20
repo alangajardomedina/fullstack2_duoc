@@ -1,0 +1,37 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color:  rgb(180, 128, 228);
+}
+.btm-contacto{
+    background-color: rgb(146, 88, 201);
+    color: white;
+    border-radius: 4px;
+    border-color: rgb(55, 30, 83);
+    font-size: 15px;
+}
+.btm-contacto:hover{
+    background-color: rgb(62, 11, 110);
+}
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media(max-width:705px){
+    nav ul{
+        display: block;
+    }
+    .btm-contacto{
+        font-size: 50px;
+    }
+}
+@media(max-width:400px){
+    nav ul{
+        display: block;
+    }   
+}
