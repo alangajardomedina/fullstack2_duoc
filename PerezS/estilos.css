@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('./assets/img/fondo tren star rail.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* gif inicial */
+#logo-gif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* contenido principal - oculto al inicio */
+#contenido {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 70px;
+}
+
+/* Menú */
+nav {
+    background-color: rgba(0, 0, 0, 0.226);
+    padding: 10px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    color: blueviolet;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Botón */
+
+#contenedor-boton {
+    display: flex;
+    justify-content: flex-start;  
+    align-items: center;           
+    flex-direction: column;        
+    margin-top: 50px;              
+    gap: 20px;                     
+    height: auto;                  
+}
+
+
+.boton-colorido {
+    position: relative;
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    background: black;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* borde animado del botón */
+.boton-colorido::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50px;
+    background: linear-gradient(270deg, green, cyan, blue, violet);
+    background-size: 600% 600%;
+    z-index: -1;
+    animation: moverColores 4s linear infinite;
+}
+
+/* animación borde de los colores */
+@keyframes moverColores {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* GIF herta oculto hasta que se haga click */
+#gif-mostrado {
+    margin-top: 20px;
+    display: none;
+}
+
+/* pie de página */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honkai Star Rail</title>
+    <link rel="icon" href="./assets/img/icon star rail.png">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- GIF de carga inicial -->
+    <div id="logo-gif">
+        <img src="./assets/img/star rail logo gif.webp" alt="Logo animado" width="200px">
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="https://youtu.be/xsvZOUnXdWM">Contacto</a></li>
+            <li><a href="#">proximamente</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div id="contenido">
+        <main>
+            <img src="./assets/img/logo oficial star rail.png" alt="logo" width="200px">
+        </main>
+
+        <!-- Botón centrado -->
+        <section id="contenedor-boton">
+            <button class="boton-colorido" onclick="mostrarGif()">
+                Surprise
+            </button>
+            <!-- GIF de Herta -->
+            <div id="gif-mostrado">
+                <img src="./assets/img/herta gif star rail.gif" alt="GIF de Herta" width="250px">
+            </div>
+        </section>
+    </div>
+
+    <!-- Pie de la página -->
+    <footer>
+        <p>Todos los derechos reservados &reg;</p>
+    </footer>
+
+    <script>
+        // Muestra el contenido después de 3 segundos de carga
+        window.onload = function () {
+            var gifCarga = document.getElementById('logo-gif');
+            var contenido = document.getElementById('contenido');
+
+            setTimeout(function () {
+                gifCarga.style.display = 'none';
+                contenido.style.display = 'block';
+            }, 3000);
+        }
+
+        // Muestra el gif de Herta al hacer click
+        function mostrarGif() {
+            document.getElementById('gif-mostrado').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
