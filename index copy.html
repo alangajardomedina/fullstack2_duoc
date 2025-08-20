@@ -5,41 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ara Cosas</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: url('assets/img/fondo2.gif'); /* fondo rosa pastel */
+      background: linear-gradient(135deg, #af896a 0%, #534437 100%);
       margin: 0;
       padding: 0;
-      min-height: 100vh;        /* altura completa de la pantalla */
-      display: flex;
-      justify-content: center;   /* centra horizontalmente */
-      align-items: center;       /* centra verticalmente */
-      color: #333;
+      min-height: 100vh;
+      color: #413129;
     }
-    header{
+
+    header {
       text-align: center;
-      background: #eed0df; /* rosado pastel */
+      background: #fff7d6; /* amarillo pastel */
       padding: 2rem;
+      border-radius: 15px 15px 0 0;
     }
 
     nav a {
-      display: inline-block;       /* para poder poner padding */
-      background-color: #a54968;   /* color de fondo del botón */
-      color: white;                /* texto blanco */
-      padding: 0.5rem 1.5rem;        /* espacio interno */
-      border-radius: 8px;          /* bordes redondeados */
-      margin: 0.5rem;            /* espacio entre botones */
-      transition: background 0.3s; /* efecto suave al pasar el mouse */
+      display: inline-block;
+      background-color: #a58a6a; /* café claro */
+      color: #fff7d6; /* amarillo pastel */
+      padding: 0.5rem 1.5rem;
+      border-radius: 8px;
+      margin: 0.5rem;
+      transition: background 0.3s;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
     nav a:hover {
-      background-color: #73a04e;   /* cambia de color al pasar el mouse */
+      background-color: #a54968; /* café/rosado */
+      color: #fff;
     }
 
     section {
-        text-align: center;
-        background: #eed0df; /* rosado pastel */
-        padding: 2rem;
+      text-align: center;
+      background: #ffa4cf; /* rosa pastel */
+      padding: 2rem;
+      border-radius: 0 0 15px 15px;
     }
 
     footer {
@@ -47,26 +53,29 @@
       padding: 1rem 0;
       margin-top: 2rem;
       font-size: 0.9rem;
-      color: #555;
+      color: #a58a6a;
+      background: #fff7d6;
+      border-radius: 0 0 15px 15px;
     }
 
     .white-container {
       max-width: 900px;
       width: 90%;
-      background: #fff; /* recuadro blanco */
+      background: #fff7d6; /* amarillo pastel */
       padding: 2rem;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      margin-top: 3rem; /* espacio arriba */
-      margin-bottom: 3rem; /* espacio abajo */
+      box-shadow: 0 5px 15px rgba(164, 73, 104, 0.08);
+      margin-top: 7rem;
+      margin-bottom: 3rem;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .pink-container {
-      /* ffe5f2 */
-      background: #eed0df; /* recuadro rosado dentro */
-      padding: 2rem;
+      background: #ffa4cf; /* rosa pastel */
+      padding: 5rem;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(156, 0, 0, 0.1);
+      box-shadow: 0 5px 15px rgba(164, 73, 104, 0.08);
     }
 
     .grid {
@@ -79,32 +88,100 @@
     }
 
     .card {
-      background: #fff;
+      background: #fff7d6; /* amarillo pastel */
       border-radius: 15px;
       padding: 1.5rem;
       text-align: center;
-      box-shadow: 0 8px 15px rgba(156, 0, 0, 0.1);
+      box-shadow: 0 8px 15px rgba(164, 73, 104, 0.08);
       transition: transform 0.3s;
+      border: 2px solid #a58a6a;
     }
 
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(164, 73, 104, 0.18);
     }
 
     img {
       width: 100%;
       border-radius: 2rem;
       margin-bottom: 0.5rem;
+      border: 2px solid #a58a6a;
+      background: #fff7d6;
+    }
+
+    /* Barra de navegación superior neapolitan */
+    .navbar-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(90deg, #fff7d6 0%, #ffc9e2 80%);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0.5rem 2rem;
+      box-shadow: 0 4px 16px rgba(164, 73, 104, 0.12);
+      z-index: 100;
+      border-radius: 0 0 18px 18px;
+    }
+
+    .logo-top {
+      height: 50px;
+      width: auto;
+      margin-right: 1rem;
+      object-fit: contain;
+      transition: transform 0.2s;
+      background: #fff7d6;
+      border-radius: 12px;
+      border: 1px solid #a58a6a; /* Borde más delgado */
+    }
+
+    .logo-top:hover {
+      transform: scale(1.08) rotate(-5deg);
+    }
+
+    .brand-top {
+      font-size: 1.7rem;
+      font-weight: bold;
+      color: #a54968;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px #fff7d6;
+    }
+
+    /* Estilos para los GIFs */
+    .gif-top, .gif-bottom {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .gif-top img, .gif-bottom img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid #a58a6a;
     }
 
   </style>
 </head>
 <body>
+  <!-- Barra superior fuera del contenedor blanco -->
+  <nav class="navbar-top">
+    <a href="#">
+      <img src="assets/img/logo2.webp" alt="Logo" class="logo-top">
+    </a>
+    <span class="brand-top">Ara Cosas</span>
+  </nav>
   <div class="white-container">
     <div class="pink-container">
 
       <header>
-        <h1>- 🌷 Cositas Interesantes 🌷 - </h1>
+        <!-- GIF arriba del título -->
+        <div class="gif-top">
+          <img src="assets/img/gif_arriba.webp" alt="Gif decorativo arriba">
+        </div>
+        <h1>- ⋆౨ৎ˚⟡˖ ࣪  Cositas Interesantes ࣪  ˖⟡˚౨ৎ⋆ - </h1>
         <h2>Una pequeña coleccion de insectos, animales marinos y flores.</h2>
         <p>
           ¡Hola! Bienvenid@ a mi página dedicada a las maravillas de la naturaleza. 
@@ -138,28 +215,46 @@
   
   <!--Seccion Animales-->
         <section id="animales">
-          <h2>Animales</h2>
+          <h2>- ⋆౨ৎ˚⟡˖ ࣪  Animales ࣪  ˖⟡˚౨ৎ⋆-</h2>
           <div class="grid">
-  
+
             <div class="card">
               <article>
                 <img src="assets/img/Sepia.webp" alt="Sepia">
                 <h3>Sepia</h3>
+                <p>
+                  ¡La sepia es como una artista del océano! Puede cambiar de color y textura en un instante, escondiéndose de sus enemigos como si jugara a las escondidas. Además, es muy inteligente y tiene una tinta especial para escapar cuando se asusta. ¡Un verdadero genio marino!
+                </p>
               </article>
             </div>
-    
+
             <div class="card">
               <article>
-                <img src="assets/img/Leafslug.webp" alt="Leaf Slug">
+                <img src="assets/img/Leafslug.jpg" alt="Leaf Slug">
                 <h3>Leaf Slug</h3>
-  
+                <p>
+                  El leaf slug, también conocido como “ovejita de mar”, es una criatura adorable que parece una hoja. ¿Sabías que puede hacer fotosíntesis como una planta? Cuando come algas, guarda sus cloroplastos y puede aprovechar la luz del sol para obtener energía. ¡Es como tener superpoderes verdes!
+                </p>
               </article>
             </div>
-    
+
             <div class="card">
               <article>
                 <img src="assets/img/Cliónidos.jpg" alt="Clionidos">
                 <h3>Cliónidos</h3>
+                <p>
+                  Los cliónidos, llamados “angelitos de mar”, flotan en el agua con sus alitas transparentes y parecen pequeños espíritus marinos. Aunque se ven delicados y mágicos, son cazadores muy hábiles. ¡Son como hadas del océano, pero con mucha personalidad!
+                </p>
+              </article>
+            </div>
+
+            <div class="card">
+              <article>
+                <img src="assets/img/PulpoDumbo.PNG" alt="Pulpo Dumbo">
+                <h3>Pulpo Dumbo</h3>
+                <p>
+                  El pulpo Dumbo es una de las criaturas más adorables del océano. Con sus aletas que parecen orejas, nada de una manera muy peculiar, como si estuviera volando en el agua. Además, es muy inteligente y puede cambiar de color para camuflarse. ¡Es un verdadero encanto marino!
+                </p>
               </article>
             </div>
           </div>
@@ -167,12 +262,15 @@
     
   <!--Seccion Insectos-->
         <section id="insectos">
-          <h2>Insectos</h2>
+          <h2>- ⋆౨ৎ˚⟡˖ ࣪  Insectos ࣪  ˖⟡˚౨ৎ⋆-</h2>
           <div class="grid">
             <div class="card">
               <article>
                 <img src="assets/img/PolilladeSeda.jpg" alt="Polilla de Seda">
-                <h3>Polilla Rosada del Arce</h3>
+                <h3>Polilla del Arce</h3>
+                <p>
+                  ¡La polilla del arce parece una pequeña joya alada! Sus colores suaves y su vuelo tranquilo la hacen parecer un hada nocturna. Es experta en camuflarse entre las hojas y, aunque es muy discreta, ¡su belleza sorprende a quien la encuentra!
+                </p>
               </article>
             </div>
     
@@ -180,6 +278,9 @@
               <article>
                 <img src="assets/img/AranaFlor.webp" alt="Araña Flor">
                 <h3>Epicadus Heterogaster</h3>
+                <p>
+                  Esta arañita, conocida como “araña flor”, es toda una artista del disfraz. Puede cambiar de color para parecerse a las flores donde vive, ¡como si jugara a ser invisible! Es pequeñita y curiosa, y su forma de cazar es tan delicada como su aspecto.
+                </p>
               </article>
             </div>
     
@@ -187,6 +288,19 @@
               <article>
                 <img src="assets/img/Abejorro (1).jpg" alt="Abejorro">
                 <h3>Bombus terrestris</h3>
+                <p>
+                  El abejorro es el peluche volador del jardín. Siempre ocupado, va de flor en flor recogiendo polen y ayudando a que las plantas crezcan. Su zumbido alegre y su cuerpo regordete lo hacen irresistible, ¡es el gran amigo de las flores!
+                </p>
+              </article>
+            </div>
+
+            <div class="card">
+              <article>
+                <img src="assets/img/mantiso.webp" alt="Mantis Orquídea">
+                <h3>Hymenopus coronatus</h3>
+                <p>
+                  Esta mantis, conocida como “mantis orquídea”, es una verdadera obra de arte de la naturaleza. Sus patas y cuerpo imitan perfectamente los pétalos de una flor, lo que le permite camuflarse entre las plantas y sorprender a sus presas. ¡Es como si llevara un disfraz floral todo el tiempo!
+                </p>
               </article>
             </div>
           </div>
@@ -194,7 +308,7 @@
   
   <!--Seccion Flores-->
         <section id="flores">
-          <h2>Flores</h2>
+          <h2>- ⋆౨ৎ˚⟡˖ ࣪  Flores ࣪  ˖⟡˚౨ৎ⋆-</h2>
           <div class="grid">
             <div class="card">
               <article>
@@ -219,9 +333,11 @@
       <footer>
         <p>© 2025 Ara Cosas. Todos los derechos reservados.</p>
       </footer>
+        <div class="gif-bottom">
+          <img src="assets/img/gif_arriba.webp" alt="Gif decorativo abajo">
+        </div>
     </div>
 
   </div>
-  
 </body>
 </html>
