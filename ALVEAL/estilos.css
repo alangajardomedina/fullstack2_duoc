@@ -1,0 +1,39 @@
+/* Selector general (en body se cambia el estilo en general de la pagina)*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1;
+    padding: 1;
+}
+header{
+    background-color: blue;
+}
+header h2{
+    color:aqua;
+}
+.btn-contact{
+    background-color: greenyellow;
+    color: blue;
+    border-radius: 7px; /* borde del boton redondeado*/
+    border-color: aqua;
+    font-size: 200%;
+}
+.btn-contact:hover{/*caludad que se aplica cuando el mouse pasa por encima*/
+    background-color: green;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media(max-widht:705px){ /* altera el tamaño del boton cuando llega a cierto limite puesto*/
+    .btn-contact{
+        font-size: 50px;
+    }
+}
+/*medida css estandar*/
+@media(max-width:400px){
+    nav ul{
+        display: block;
+    }
+}
