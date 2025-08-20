@@ -6,162 +6,26 @@
     <title>Kirby</title>
     <link rel="icon" href="assets/img/kirby.png">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
-    <style>
-        header{
-            margin: 0px;
-            background-color: #ffb0d0;
-            color: rgb(185, 21, 57);
-            font-weight: bold;
-            font-size: 28px;
-            box-shadow: 2px 2px 5px 0px rgba(145, 17, 81, 0.452);
-        }
-
-        body{
-            margin: 0px;
-            font-family: 'Baloo 2',cursive;
-            min-height: 100vh;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            background: radial-gradient(
-                ellipse at center,
-                #ffe6f0 20%,
-                #e97da8 90%,
-                #e76699 100%
-            );
-            background-attachment: fixed;
-            overflow-x: hidden;
-        }
-
-        main {
-            margin: 20px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-            width: 100%;
-            box-sizing: border-box;
-            gap: 20px;
-        }
-
-        figure {
-            margin: 0 0 20px 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        figure img {
-            max-width: 300px;
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        article {
-            width: 80%;
-            min-width: 250px;
-            max-width: 1000px;
-            background-color: aliceblue;
-            border-radius: 20px;
-            box-shadow: 2px 2px 17px 5px rgba(228, 108, 188, 0.384);
-            box-sizing: border-box;
-            margin: 0 auto;
-            flex: none;
-        }
-
-        footer {
-            background-color: rgb(141, 19, 45);
-            width: 100%;
-            height: 70px;
-            color: white;
-            justify-content: center;
-            place-items: center;
-            display: grid;
-            margin-top: 50px;
-            box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.452);
-        }
-
-        a {
-            background-color: #ffb0d0;
-            padding: 8px 15px;
-            border-radius: 20px;
-            text-decoration: none;
-            color: rgb(185, 21, 57);
-            transition: 0.3s;
-        }
-
-        a:hover {
-            background-color: rgb(255, 200, 220);
-            transform: scale(1.1);
-        }
-
-        a:focus {
-            background-color: rgb(255, 139, 182);
-            transform: scale(1.1);
-        }
-
-        @keyframes flotar {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-        }
-        header img {
-            animation: flotar 3s ease-in-out infinite;
-        }
-
-        h1{
-            margin: 5px;
-        }
-
-        h2{
-            margin: 5px;
-            font-size: larger;
-            text-align: center;
-            font-weight: bolder;
-            font-size: xx-large;
-            color: rgb(185, 21, 57);
-        }
-
-        h3{
-            margin: 5px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 23px;
-            color: rgb(185, 21, 57);
-        }
-
-        p{
-            font-size: larger;
-            margin: 20px;
-            text-align: justify;
-        }
-
-        ul{
-            font-size: larger;
-            margin: 20px;
-            text-align: justify;
-        }
-
-        @media (max-width: 900px) {
-            article {
-                width: 100%;
-                max-width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header style= "width: 100%; align-items: center; display: flex; justify-content: space-between;">
         <div style="justify-items: left; padding-left: 20px; display: flex; align-items: center;">
             <img src="assets/img/kirby.png" alt="Kirby" style="margin-right: 10px; height: 39px;">
-            <h1>Kirby</h1>
+            <a href="#cara_kirby"><h1 style="font-size: 45px;">Kirby</h1></a>
         </div>
-        <a style="justify-items: right; padding-right: 20px;" href="/index.html"><h2>Salir</h2></a>
+        <nav style="justify-items: right; padding-right: 20px; display: inline-block; box-sizing: border-box;">
+            <a href="#origen">Origen</a>
+            <a href="#juegos">Juegos</a>
+            <a href="#curiosidades">Curiosidades</a>
+            <a href="/index.html">Salir</a>
+        </nav>
     </header>
     <main>
         <figure>
-            <img src="assets/img/kirby transparente.png" alt="cara de kirby" style="width: 100%;">
+            <img id="cara_kirby" src="assets/img/kirby transparente.png" alt="cara de kirby" style="width: 100%;">
         </figure>
-        <article >
+        <article id="origen">
             <h2>Origen</h2>
             <p>
                 <b>Kirby</b> (<i><b>カービイ</b></i> <i>Kābī</i> en Japonés)
@@ -187,7 +51,7 @@
             <img src="https://www.pikpng.com/pngl/b/579-5794086_kirby-super-star-ultra-png-download-kirby-warp.png" alt="Kirby volando" style="width:100px; margin: 10px;">
             <img src="https://i.redd.it/zer1umlp4na41.png" alt="Kirby comiendo" style="width:100px; margin: 10px;">
         </section>
-        <article>
+        <article id="juegos">
             <h2>Juegos</h2>
             <h3>La Saga Kirby: Un Viaje Cronológico por el Universo de la Bola Rosa</h3>
             <p>
@@ -265,7 +129,7 @@
             </section>
         </article> 
         <img src="https://i.pinimg.com/originals/2f/c1/b8/2fc1b8f82e14172e3bcae39ca8c8ab33.gif" alt="Kirby-sombrilla" style="width:150px;">
-        <article>
+        <article id="curiosidades">
             <h2>¡Curiosidades!</h2>
             <ul>
                 <li><strong>Parodia Azulada:</strong> ¡Imagínate a Kirby de color azul! Así lo parodiaron en un segmento del famoso programa <em>MAD</em>. 💙</li>
