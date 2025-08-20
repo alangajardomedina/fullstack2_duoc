@@ -1,0 +1,35 @@
+/*SELECTOR GENERAL*/
+body{
+    font-family:fantasy;
+    margin: 20;
+    padding: 15;
+}
+header h1{
+    background-color: rgb(0, 210, 247);
+}
+.btn-pulento{
+    background-color: chartreuse;
+    color: white;
+    border-radius: 6px;
+    border-color: black;
+    font-size: 30px;
+
+}
+.btn-pulento:hover{
+    background-color: rgb(33, 109, 33);
+}
+nav ul{
+    display :flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media(max-width:246px){
+    .btn-pulento{
+        font-size: 50px;
+    }
+}
+@media(max-width:444px){
+    nav h1{
+        display: block;
+    };
+}
