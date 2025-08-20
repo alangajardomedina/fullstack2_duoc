@@ -144,6 +144,25 @@ ul{
     article {
         width: 100%;
         max-width: 100%;
+        font-size: clamp(16px, 4vw, 20px);
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    html{
+        scroll-padding-top: 200px;
+    }
+    main{
+        margin-top: 200px;
+    }
+}
+@media (max-height: 400px) {
+    article {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(20px, 4vw, 25px);
     }
     header {
         flex-direction: column;
