@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spider-man</title>
+    
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: blueviolet;
+        
+        }
+        .btn-contacto{
+            background-color: greenyellow;
+            color: white;
+            border-radius:  50px;
+            font-size: 50px;
+        }
+        .btn-contacto:hover{
+            background-color: green;
+        }
+        nav ul{
+            display: flex ;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        @media(max-width:705px){
+            .btn-contacto{
+                font-size: 30px;
+        
+        
+            }
+        
+        }
+        @media(max-width:400px){
+            nav ul{
+                display: block;
+            }
+        }
+    </style>
+    
+</head>
+
+<body>
+        <header style="background-color: blueviolet;">
+            <h1 style="color: aliceblue; font-size: 50px;">hola bienvenidos</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">inicio</a></li>
+                <li><a href="#">menu</a></li>   
+                <li><a href="#">contaco</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h2>como tan muchacho</h2>
+                <p>no se que estoy haciendo pero me veo bn haciendolo</p>
+                <button class="btn-contacto">precionar</button>
+            </section>
+        </main>
+        <footer>
+            <p>&copy;dios iluminame o eliminame porfa</p>
+        </footer> 
+</body>
+</html>
