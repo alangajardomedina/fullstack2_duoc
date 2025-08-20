@@ -7,6 +7,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="icon" href="./img/zapatos.png">
 </head>
+
+<style>
+  body{font-family: Arial, Helvetica, sans-serif;}
+  .btn-contacto{
+    border-radius: 10px;
+    font-size: 50px;
+    background-color: green;
+    color: white;
+    border-color: white;
+  }
+  .btn-contacto:hover{
+    background-color: aqua;
+  }
+  nav ul{
+    display:flex;
+    justify-content: space-between;
+    justify-content: space-around;
+  }
+  @media(max-with:705px){
+    .btn-contacto{font-size: 30px;}
+  }
+</style>
+
+<header style="background-color: rgb(7, 6, 6);">
+  <nav><ul>
+  <li><a href="#">Inicio</a></li>
+  <li><a href="#">Menú</a></li>
+  <li><a href="#">Contacto</a></li>
+</ul></nav>
+<main>
+  <section><h2 style="color: rgb(253, 253, 253);text-align: center;">Bienvenido</h2></section>
+</main>
+</header>
+
+
+
 <body style="background-image: url(./img/estante.jfif);">
 <div style="width: 600px; margin: 0 auto; background: rgb(7, 7, 6); text-align: center;">
     <h1 style="color: white;">Zapatolandia</h1>
@@ -42,14 +78,14 @@
       <img src="./img/travis.jfif"  style="margin: 10px;display: block;">
       <h2 style="text-align: center;color: white;">Jordan</h2>
       <h3 style="color: white;">tenis Air Jordan 1 High OG TS SP Travis Scott</h3>
-      <p>Precio $2.324.522</p>
+      <p style="color: white;">Precio $2.324.522</p>
       </div>
 
       <div style="display: inline-block;width: 250px; ;background-color: #000000; text-align:center;vertical-align:top;margin:10px;padding-top:10px;">
       <img src="./img/facha.jfif"style="width: 240px;">
       <h2 style="text-align: center;color: white;">Facha</h2>
       <h3 style="color: white;">Que envidia</h3>
-      <p>Precio $5.000.000</p>
+      <p style="color: white;">Precio $5.000.000</p>
         </div>
 
 
@@ -57,7 +93,7 @@
       <img src="./img/maquina de guerra.jfif">
       <h2 style="text-align: center;color: white;">Maquina de guerra</h2>
       <h3 style="color: white;">!Peligro!</h3>
-      <p>Precio $43.522</p>
+      <p style="color: white;">Precio $43.522</p>
         </div>
 
     
@@ -65,26 +101,28 @@
       <img src="./img/cafers.jfif"  style="margin: 10px">
       <h2 style="text-align: center;color: white;">Cafesitos</h2>
       <h3 style="color: white;text-align: center;">zapatillas cafes</h3>
-      <p>Precio $40.501</p>
+      <p style="color: white;text-align: center;">Precio $40.501</p>
       </div>
 
     <div style="display: inline-block;width: 250px; ;background-color: #000000; text-align:center;vertical-align:top;margin:10px;padding-top: 10px;padding-bottom: 10px;">
       <img src="./img/fut.jfif">
       <h2 style="text-align: center;color: white;">Fuchibol?</h2>
       <h3 style="color: white;">Dan talento</h3>
-      <p>Precio $32.500</p>
+      <p style="color: white;">Precio $32.500</p>
         </div>
 
     <div style="display: inline-block;width: 250px; ;background-color: #000000; text-align:center; vertical-align:top;margin:10px;padding-top: 10px;padding-bottom: 10px">
       <img src="./img/shrek.jfif">
       <h2 style="text-align: center;color: white;">Shrek</h2>
       <h3 style="color: white;">El ogro que amado por todos</h3>
-      <p>Precio $500.000</p>
+      <p style="color: white;">Precio $500.000</p>
         </div>
  
     </div>
     
-    
-</body>
+    <footer><p style="color: whitesmoke;">&copy;2025 somos los que somos</p></footer>
+    <button class="btn-contacto" >Contacto</button>
+
+  </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>
