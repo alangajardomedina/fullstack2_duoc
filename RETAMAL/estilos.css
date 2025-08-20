@@ -1,0 +1,36 @@
+/*Selector general*/
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: rgb(37, 36, 150);
+        }
+        .btn-contacto{
+            background-color: rgb(140, 231, 3);
+            color: white;
+            border-radius: 5px;
+            border-color: black;
+            font-size: 20px;
+        }
+        .btn-contacto:hover{
+            background-color: rgb(0, 185, 0);
+        }
+        nav ul{
+            display: flex;
+            justify-content: space-around;
+            text-decoration: none;
+            list-style: none;
+        }
+        @media(max-width:300px){
+            .btn-contacto{
+                font-size: 10px;
+            }
+        }
+
+        @media(max-width:208px){
+            nav ul{
+                display: block;
+            }
+        }
