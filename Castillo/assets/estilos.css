@@ -3,31 +3,38 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('/CASTILLO/assets/img/fondo.png');
+    background-image: url("img/fondo.jpeg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;           
 }
+
 header{
     color:white; background-color: rgba(0, 0, 0, 0.5);
+}
 
-    }
+header p{
+    color: white;
+}   
+
 h1{
     padding: 10px;
 }
-.btn-contacto{
-    background-color: white;
+
+.btn-invocacion{
+    background-color: rgba(233, 210, 4, 0.479);
     color: black;
     border-radius: 10px;
-    border-color: white;
-    font-size: 100px;
+    border-color: black;
+    font-size: 30px;
+}
 
+.btn-invocacion:hover{
+    background-color: rgba(233, 210, 4, 0.829);
 }
-.btn-contacto:hover{
-    background-color: rgba(212, 193, 14, 0.829);
-}
+
 nav{
-    color: white;background-color: rgba(251, 255, 0, 0.315); 
+    color: rgba(255, 255, 255, 0);background-color: rgba(0, 0, 0, 0.767); 
 }
 
 nav ul{
@@ -37,8 +44,15 @@ nav ul{
 }
 
 section h3{
-    color: white;
     color:white; background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer{
+    padding: 100px
+}
+
+footer p{
+    color: white; background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media(max-width:510px){
