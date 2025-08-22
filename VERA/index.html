@@ -8,29 +8,41 @@
 
 </head>
 <body>
-    <header style="background-color:  orange">
-        <h1 style="color:   blue">Bienvenido a mi página web</h1>
-    </header>
 
-    <nav>
-        <!--ul>li*3>a-->
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Menú</a></li>
-            <li><a href="#">Contacto</a></li>
+    <nav class="navbar">
+        <div class="navbar__logo">Mi Sitio</div>
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a class="navbar__link" href="#">Inicio</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Temas</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Contacto</a></li>
         </ul>
     </nav>
 
-    <main>
-        <section>
-            <h2>Bienvenido</h2>
-            <p>Disfruta de la mejor página web del mundo.</p>
-            <button class="btn-contacto">Enviar mensaje</button>
+    <main class="content">
+        <!--section>img+div>h2+p+a-->
+        <section class="card">
+            <img src="https://preview.redd.it/top-10-mejores-t%C3%A9cnicas-de-broly-culo-v0-nby93fc36k2b1.jpg?auto=webp&s=0bcc56cf51c95c84ce36c4a4a5405ae88f99bdb6" alt="Broly poton" class="card__image">
+            <div class="card__body">
+                <h2 class="card__title">broly y CSS</h2>
+                <p class="card__text">¡Parece que Broly está demostrando que no solo es fuerte, sino que también tiene un estilo único para dar un "apretón de hombro"! Goku, por su parte, claramente no estaba preparado para esta dosis de cariño muscular. Un momento épico de "¡Ay, me están aplastando, pero igual me siento orgulloso!" en el que Goku parece que está buscando una salida </p>
+                <a href="#" class="card__button card__button--primary">Leer más</a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Somos el mejor pais de chile</p>
+    <!--aside.sidebar>h3.sidebar__title+ul.siderbar__list>li.siderbar__item*2-->
+    <aside class="sidebar">
+        <h3 class="sidebar__title">Noticias</h3>
+        <ul class="siderbar__list">
+            <li class="siderbar__item">Novedades CSS 2025</li>
+            <li class="siderbar__item">Nuevas metodologías</li>
+        </ul>
+    </aside>
+    <!-- footer.footer>p.footer__texto-->
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 MiSitio con BEM</p>
     </footer>
+
+    
 </body>
 </html>
