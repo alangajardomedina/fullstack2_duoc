@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos_practica.css">
+    <title>Mi Sitio</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">Mi sitio</div>
+        <ul class="navbar__menu"> 
+            <li class="navbar__item"><a class="navbar__link"  href="#">Inicio</a></li>
+            <li class="navbar__item"><a class="navbar__link"  href="#">Tema</a></li>
+            <li class="navbar__item"><a class="navbar__link"   href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section class="card">
+            <img src="https://i.pinimg.com/736x/ec/2c/22/ec2c22ca2c1ebf8fbdef431090d2baba.jpg" alt="gato :O" class="card__image">
+            <div class="card__body">
+                <h2 class="card__title">Gatitos y CSS</h2>
+                <p class="card__text">Que lindos los gatos, como amo los gatos</p>
+                <a href="" class="card__button card__button--primary"> Leer más</a> 
+            </div>
+        </section>
+    </main>
+    <!--aside.sidebar>h3.sidebar__title+ul.sidebar__list>li.sidebar__item*2-->
+    <aside class="sidebar">
+        <h3 class="sidebar__title">Noticias</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">Novedades CSS 2025</li>
+            <li class="sidebar__item">Nuevas metodologías</li>
+        </ul>
+    </aside>
+
+    <!--footer.footer>p.footer__text-->
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 MiSitio con BEM</p>
+    </footer>
+</body>
+</html>
