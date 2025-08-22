@@ -9,19 +9,31 @@
 </head>
 
 <body>
-    <center>
-    <header>
+    <header class="cabecera">
         <h1>¿CUÁL ES TU GUERRERO Z FAVORITO?</h1>
         <p>¡Acá puedes visualizar las mejores postales de tus guerreros Z favoritos!</p>
     </header>
-    <nav>
-        <ul>
-            <li><a href="../index.html">INICIO</a></li>
-            <li><a href="https://www.duoc.cl/contacto-admision/" target="_blank" rel="noopener noreferrer">CONTACTO</a></li>
-            <li><a href="https://youtu.be/LZkOcwgKssM?t=4" target="_blank" rel="noopener noreferrer">NO ENTRAR</a></li>
+    
+    <!--Nav sería el bloque-->
+    <nav class="navbar">
+        <div class="navbar__logo">Mi sitio</div>
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a class="navbar__link" href="../index.html">INICIO</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="https://www.duoc.cl/contacto-admision/" target="_blank" rel="noopener noreferrer">CONTACTO</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="https://youtu.be/LZkOcwgKssM?t=4" target="_blank" rel="noopener noreferrer">NO ENTRAR</a></li>
         </ul>
     </nav>
-    <main>  
+    <main class="content">  
+        <section class="card">
+            <img src="https://img.wattpad.com/57f1b2c8f48db92eb622fcabab57481f2fbc33a2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f2d3433574952524b6a44464233413d3d2d313234393735393635362e313730336532353934323561376537363130343134393739323438392e6a7067?s=fit&w=720&h=720" 
+            alt="majinboo" class="card__image">
+            <div class="card__body">
+                <h2 class="card__title">Majin boo</h2>
+                <p class="card__texto">Majin boo es rosado y todo poderoso</p>
+                <a href="#" class="card__button card__button--primary">Leer más</a>
+            </div>
+        </section>
+
         <select name="guerreros" id="guerreros">
             <option value="primero">Selecciona tu guerrero Z favorito</option>
             <option value="goku">Goku</option>
@@ -66,6 +78,7 @@
                 }
             });
         </script>
+
         <br><br><br><br><br><br>
         <section>
             <h3>¿QUIERES INVOCAR A SHEN LONG?</h3>
@@ -76,10 +89,16 @@
 
     </main>
 
-    <footer>
-        <p >LA PROGRAMACIÓN ES MI PASIÓN</p>
-        <p>Todos los derechos reservados &reg;</p>
+    <aside class="sidebar">
+        <h3 class="sidebar__title">Noticias</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">Novedades CSS 2025</li>
+            <li class="sidebar__item">Nuevas metodologías</li>
+        </ul>
+    </aside>
+
+    <footer class="footer">
+        <p class="footer__text">LA PROGRAMACIÓN ES MI PASIÓN</p>
     </footer>
-    </center>
 </body>
 </html>

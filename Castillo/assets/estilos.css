@@ -2,11 +2,88 @@ body {
     /*Selector general*/
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
+    display: grid;
+    grid-template-areas: 
+        "nav nav"
+        "header header"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    min-height: 100vh;
     padding: 0;
     background-image: url("img/fondo.jpeg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;           
+}
+
+/*navbar*/
+.navbar{
+    grid-area: nav;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.navbar__logo{
+    font-weight: bold;
+}
+
+.navbar__menu{
+    list-style: none;
+    display: flex;
+    gap: 8rem;
+}
+
+.navbar__link{
+    color: white;
+    text-decoration: none;
+}
+
+/*Card*/
+.card{
+    grid-area: main;
+    background-color: aliceblue;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+}
+
+.card__image{
+    width: 100%;
+    display: block;
+}
+
+.card__body{
+    padding: 1rem;
+}
+
+.card__title{
+    margin: 0;
+}
+
+.card__text{
+    margin: 1rem 0;
+}
+
+.card__button{
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card__button--primary{
+    background: blue;
+    color: white;
+    border-radius: 5px;
+}
+
+.cabecera{
+    grid-area: header;
 }
 
 header{
@@ -33,6 +110,21 @@ h1{
     background-color: rgba(233, 210, 4, 0.829);
 }
 
+.sidebar{
+    grid-area: aside;
+    background: #eee;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.footer{
+    grid-area: footer;
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem;
+}
+
 nav{
     color: rgba(255, 255, 255, 0);background-color: rgba(0, 0, 0, 0.767); 
 }
@@ -55,8 +147,26 @@ footer p{
     color: white; background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media(max-width:510px){
+@media(max-width:400px){
+    body{
+        grid-template-areas: "nav"
+                             "main"
+                             "aside"
+                             "footer";
+        grid-template-columns: 1fr;
+    }
+    
     nav ul{
         display: block;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar__menu{
+        flex-direction: column;
+        align-items: center;
     }
 }
