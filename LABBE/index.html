@@ -8,26 +8,39 @@
     <Link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header 
-        style="background-color: rgb(255, 45, 133);">
-        <h1 style="color: white; font-size: 50px;">Bienvenido a mi página web</h1>
-    </header>
-    <nav>
-        <!--comentario html-->
-        <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Menú</a></li>
-        <li><a href="#">Contacto</a></li></ul>
+    <!--nav sería el bloque-->
+    <nav class="navbar">
+        <div class="navbar__logo">Mi Sitio</div>
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a class="navbar__link" href="#">Inicio</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Temas</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Contacto</a></li>
+        </ul>
     </nav>
-    <main>
-        <section>
-            <h2>Bienvenido!!</h2>
-            <p>Disfruta de mi primera página</p>
-            <button class="btn-Contacto">Enviar mensaje</button>
+
+    <main class="content">
+        <section class="card">
+            <img src="https://www.anicura.es/cdn-cgi/image/f=auto,fit=cover,w=520,h=520,g=auto,sharpen=1/AdaptiveImages/powerinit/52437/_SNI2031.jpg?stamp=a2efc90c9d13cd9fdc0f5f7a2e3b2231238dc8cf" alt="gatito" class="card__image">
+            <div class="card__body">
+                <h2 class="card__title">Gatitos y CSS</h2>
+                <p class="card__text">Los gatos son cazadores, al igual que otro animales cuando tienen hambre.</p>
+                <a href="#" class="card__button card__button--primary">Leer más</a>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Mi primera página</p>
+    <!--aside.sidebar>h3.siderbar__title+ul.sidebar__list>li.sidebar__item*2-->
+
+    <aside class="sidebar">
+        <h3 class="siderbar__title">Noticias</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">Novedades CSS 2025</li>
+            <li class="sidebar__item">Nuevas metodolodías</li>
+        </ul>
+    </aside>
+
+    <!--footer.footer>p.footer__text-->
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 Misitio con BEM</p>
     </footer>
 </body>
 </html>
