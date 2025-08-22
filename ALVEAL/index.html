@@ -1,31 +1,47 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- -->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pataton</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
-    <header style="background-color: aqua;">
-        <h1 style="color: blue;">BienVenidos</h1>
-    </header>
-    <nav>
+    <!-- nav seria el bloque-->
+    <nav class="navbar">
+        <div class="navbar__logo">Mi sitio</div>
         <ul>
-            <!-- ul>li*3>a   /  hipervinculo?-->
-            <li><a href="">Inicio</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li class="navbar__menu"><a class="navbar__link" href="">Inicio</a></li>
+            <li class="navbar__menu"><a class="navbar__link" href="">Temas</a></li>
+            <li class="navbar__menu"><a class="navbar__link" href="">Contacto</a></li>
         </ul>
     </nav>
-    <main>
-        <h2>BienVenido</h2>
-        <p>Disfruta de la mejor manera la pagina piolita</p>
-        <button class="btn-contact">Enviar mensaje</button>
-        <img src="" alt="">
+
+    <main class="content">
+        <section class="card">
+            <!-- section>img+div>h2+p+a -->
+            <img src="http://bloodborne.fandom.com/es/wiki/Emisario_celestial" alt="" class="card__image">
+            <div class="card__body">
+                <h2 class="card__title">pj de enemigo</h2>
+                <p class="card__text">aqui esta la representacion del terror absoluto</p>
+                <a href="#" class="card__button card__button--primary">Leer más</a>
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 el mejor pai de Chile y sus predecesores </p>
+
+    <!-- aside>h3+ul>li*2 mas clase añadido:
+        aside.sidebar>h3.sidebar__title+ul.sidebar__list>li.sidebar__item*2-->
+    <aside class="sidebar">
+        <h3 class="sidebar__title">Noticias</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">Novedades CSS 2025</li>
+            <li class="sidebar__item">Nuevas metodologias</li>
+        </ul>
+    </aside>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 Mi sitio piolardo con BEM</p>
     </footer>
+
 </body>
 </html>
