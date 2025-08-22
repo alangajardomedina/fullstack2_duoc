@@ -1,0 +1,118 @@
+body{
+    font-family: 'arial', Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-areas:"nav nav"
+                        "main aside"
+                        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+.navbar{
+    grid-area: nav;
+    background-color: #0f0f0f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}    
+
+.navbar__logo{
+    font-weight: bold;
+}
+
+.navbar__menu{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar__link{
+    text-decoration: solid;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.card{
+    grid-area: main;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.card__image{
+    width: 100%;
+    display: block;
+}
+
+.card__body{
+    padding: 1rem;
+}
+
+.card__title{
+    margin: 0;                                                  
+}
+
+.card__text{
+    margin: 0.5rem 0;
+}
+
+.card__button{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0f0f0f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.card__button--primary{
+    background-color: #333;
+}
+
+.sidebar{
+    grid-area: aside;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #0f0f0f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 400px) {
+    body {
+        grid-template-areas:
+            "nav"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: right;
+    }
+    
+    .navbar__menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .card, .sidebar {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
