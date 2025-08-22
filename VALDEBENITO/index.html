@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <style>
+        /*selector general*/
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .btn-contacto{
+            background-color: greenyellow;
+            color: black;
+            border-radius: 3px;
+        }
+        .btn-contacto:hover{
+            background-color: green;
+        }
+        nav ul{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        @media(max-width:705px){
+            .btn-contacto{
+                font-size: 50px;
+            }
+        }
+        @media(max-width: 400px){
+            nav ul{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: rgb(0, 255, 195);">
+        <h1 style="color: coral; font-size: 50px;">Busqueda de pokemones</h1>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="#">inicio</a></li>
+                <li><a href="#">Busqueda</a></li>
+                <li><a href="#">Credito</a></li>
+            </ul>
+        </nav>
+        <main>
+                <section>
+                    <h2>Bienvenido</h2>
+                    <p>aqui podras encontrar a todos los pokemones de todas las generaciones</p>
+                    <button class="btn-pendiente">pendiente</button>
+                </section>
+        </main>
+        <footer>
+                <p>&copy; pobre del que me quite algun diseño</p>
+        </footer>
+</body>
+</html>
