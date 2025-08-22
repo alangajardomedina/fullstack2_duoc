@@ -7,27 +7,37 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 
-<body style="background-color: #ffffff;">
-    <header style="background-color: rgb(37, 36, 150)">
-        <h1 style="color: white;">Bienvenido a mi página</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Menú</a></li>
-            <li><a href="#">Contacto</a></li>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo"> Mi sitio</div>
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a class="navbar__link" href="#">Inicio</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Menú</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Contacto</a></li>
         </ul>
     </nav>
-    <main>
-        <section>
-            <h2>Bienvenido</h2>
-            <p>Disfruta</p>
-            <button class="btn-contacto">Enviar mensaje</button>
+
+    <main class="content">
+        <section class="card">
+            <img src="https://images.vexels.com/media/users/3/207691/isolated/preview/d3e94c6f6b85f254f5419872836a4d5d-llave-inglesa-gris.png" alt="llave inglesa" class="card__image">
+            <div class="card__body">
+                <h2 class="card__title"> Llave inglesa</h2>
+                <p class="card__text">Las llaves inglesas sirven para sacar tuercas y pernos</p>
+                <a href="" class="card__button card__button--primary">Leer más</a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Somos el mejor pais de Chile</p>
+    <aside class="sidebar">
+        <h3 class="sidebar__title">Noticias</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__iteam">Novedades CSS 2025</li>
+            <li class="sidebar__iteam">Nuevas metodologias</li>
+        </ul>
+    </aside>
+    
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 Mi sitio con BEM</p>
     </footer>
 
 </body>
