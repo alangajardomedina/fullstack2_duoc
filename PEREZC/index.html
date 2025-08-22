@@ -9,24 +9,40 @@
 
 </head>
 <body>
-    <header style="background-color: cornflowerblue">
-        <h1 style="color: rgb(255, 255, 255); font-size: 50px;">Hola</h1>
-    </header>
-    <nav>
-        <!-- ul>li*3>a-->
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Menú</a></li>
-            <li><a href="#">#</a></li>
+    <!--nav sería el bloque-->
+    <nav class="navbar">
+        <div class ="navbar__logo">Mi sitio</div>
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a class="navbar__link" href="#">Inicio</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Temas</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Contacto</a></li>
         </ul>
     </nav>
-    <main>
-        <section>
-            <h2>Hola</h2>
-            <p>Hola página </p>
-            <button class="btn-contacto">Enviar mensaje</button>
+
+    <main class="content">
+        <!--section>img+div>h2+p+a-->
+        <section class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbojPCAMp6nmk2rBHGqbNvBjFsCNT-0VRBbA&s" alt="" class="card__image">
+            <div class="card__body">
+                <h2 class="card__title">El coleccionista y El villano</h2>
+                <p class="card__text">El argumento del colecionista y el villano es superior a de cualquier teleserie del mega</p>
+                <a href="" class="card__button card__button--primary">Leer más</a>
+            </div>
         </section>
     </main>
-    <footer><p>&copy; 2025 Somos el mejor pais de Chile</p></footer>
+
+    <!--aside.sidebar>h3.sidebar__title+ul.sidebar__list>li.sidebar__item*2-->
+    <aside class="sidebar">
+        <h3 class="sidebar__title">Noticias</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">Novedades del lore</li>
+            <li class="sidebar__item">Nuevas teorias</li>
+        </ul>
+    </aside>
+
+    <!-- footer.footer>p.footer__text -->
+    <footer class="footer">
+        <p class="footer__text"> &copy; 2025 Lore oficial</p>
+    </footer>
 </body>
 </html>
