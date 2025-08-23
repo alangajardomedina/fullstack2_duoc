@@ -1,0 +1,103 @@
+body {
+    background-color: #311b92;
+    background-image: url('../assets/img/Fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    color: #ffcc80;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    background: #271500;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    margin-left: 30px;
+}
+
+nav a {
+    color: #ffcc80;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffcc80;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    background: #271500;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 700px;
+    box-shadow: 0 2px 10px #0006;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-right: 30px;
+    border: 3px solid #ffcc80;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #ffcc80;
+}
+
+.level {
+    background: #1e0c4a;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.links a {
+    color: #ffcc80;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.projects {
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.project-card {
+    background: #271500;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px #0004;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background: #271500;
+    color: #ffcc80;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
