@@ -11,19 +11,23 @@
 
 <body>
 
+    <!--nav sería el bloque-->
+    <nav class="navbar">
+        <div class="navbar__logo">Hola Mundo</div>
+        <ul class="navbar--menu">
+            <li class="navbar__item"><a class="navbar__link" href="#"></a>Inicio</li>
+            <li class="navbar__item"><a class="navbar__link" href="#"></a>Temas</li>
+            <li class="navbar__item"><a class="navbar__link" href="https://youtu.be/xsvZOUnXdWM">Contacto</a></li>
+        </ul>
+    </nav>
+
+
+
     <!-- GIF de carga inicial -->
     <div id="logo-gif">
         <img src="./assets/img/star rail logo gif.webp" alt="Logo animado" width="200px">
     </div>
 
-    <!-- Menú de navegación -->
-    <nav>
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="https://youtu.be/xsvZOUnXdWM">Contacto</a></li>
-            <li><a href="#">proximamente</a></li>
-        </ul>
-    </nav>
 
     <!-- Contenido principal -->
     <div id="contenido">
@@ -43,9 +47,9 @@
         </section>
     </div>
 
-    <!-- Pie de la página -->
-    <footer>
-        <p>Todos los derechos reservados &reg;</p>
+    <!-- abajo de la página -->
+    <footer class="footer">
+        <p class="footer__text">Todos los derechos reservados &reg;</p>
     </footer>
 
     <script>
@@ -65,6 +69,25 @@
             document.getElementById('gif-mostrado').style.display = 'block';
         }
     </script>
+    
+    <main class="content">
+        <section class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJVIPv1HlQyzIDFLpyBIy_-bqKJGPiBUh0XYZTBHxNPRie1VkyE4O7t6WS-FJQa3EtVa4&usqp=CAU" alt="mimikyu card" class="card_image">
+            <div class="card__body">
+                <h2 class="card__title">mimikyu</h2>
+                <p class="card__text">carta de mimikyu</p>
+                <a href="" class="card__button card__button--primary">leer más</a>
+            </div>
+        </section>
+    </main>
 
+    <aside class="sidebar">
+        <h3 class="sidebar__title">Noticias</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">Novedades</li>
+            <li class="sidebar__item">Nuevas metodologías</li>
+        </ul>
+    </aside>
+   
 </body>
 </html>
