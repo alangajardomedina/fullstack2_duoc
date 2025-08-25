@@ -10,13 +10,13 @@
 
 <body>
     <header class="cabecera">
-        <h1>¿CUÁL ES TU GUERRERO Z FAVORITO?</h1>
+        <h1 class>¿CUÁL ES TU GUERRERO Z FAVORITO?</h1>
         <p>¡Acá puedes visualizar las mejores postales de tus guerreros Z favoritos!</p>
     </header>
     
     <!--Nav sería el bloque-->
     <nav class="navbar">
-        <div class="navbar__logo">Mi sitio</div>
+        <div class="navbar__logo">WELCOME</div>
         <ul class="navbar__menu">
             <li class="navbar__item"><a class="navbar__link" href="../index.html">INICIO</a></li>
             <li class="navbar__item"><a class="navbar__link" href="https://www.duoc.cl/contacto-admision/" target="_blank" rel="noopener noreferrer">CONTACTO</a></li>
@@ -28,28 +28,29 @@
             <img src="https://img.wattpad.com/57f1b2c8f48db92eb622fcabab57481f2fbc33a2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f2d3433574952524b6a44464233413d3d2d313234393735393635362e313730336532353934323561376537363130343134393739323438392e6a7067?s=fit&w=720&h=720" 
             alt="majinboo" class="card__image">
             <div class="card__body">
-                <h2 class="card__title">Majin boo</h2>
-                <p class="card__texto">Majin boo es rosado y todo poderoso</p>
-                <a href="#" class="card__button card__button--primary">Leer más</a>
+                <h2 class="card__title">Personaje del día</h2>
+                <p class="card__texto">Majin boo es rosado y tiene capa y tiene botas y tiene hambre</p>
+                <a href="https://i.ytimg.com/vi/BTiogAt5x1Y/maxresdefault.jpg" target="_blank" rel="noopener noreferrer" class="card__button card__button--primary">Leer más</a>
             </div>
         </section>
 
-        <select name="guerreros" id="guerreros">
-            <option value="primero">Selecciona tu guerrero Z favorito</option>
-            <option value="goku">Goku</option>
-            <option value="vegeta">Vegeta</option>
-            <option value="gohan">Gohan</option>
-            <option value="piccolo">Piccolo</option>
-            <option value="krilin">Krilin</option>
-            <option value="yamcha">Yamcha</option>
-            <option value="ten">Ten Shin Han</option>
-            <option value="todos">Todos</option>
-        </select>
-        <br>
-        <br>
+        <h3>¡SELECCIONA UN GUERRERO Z PARA VER SU MEJOR MOMENTO EN EL ANIME!</h2>
+
         <div id="contenedor-imagen">
-            <img id="imagen-guerrero" src="assets/img/dragon.webp" alt="dragon" width="350px">
+            <select name="guerreros" id="guerreros">
+                <option value="primero">Selecciona tu guerrero Z favorito</option>
+                <option value="goku">Goku</option>
+                <option value="vegeta">Vegeta</option>
+                <option value="gohan">Gohan</option>
+                <option value="piccolo">Piccolo</option>
+                <option value="krilin">Krilin</option>
+                <option value="yamcha">Yamcha</option>
+                <option value="ten">Ten Shin Han</option>
+                <option value="todos">Todos</option>
+            </select>
+            <img id="imagen-guerrero" src="assets/img/radar.webp" alt="radar" width="350px">
         </div>
+
 
         <script>
             const select = document.getElementById("guerreros");
@@ -57,7 +58,7 @@
 
             const imagenes = {
                 goku:"assets/img/goku.jpg",
-                vegeta:"assets/img/vegeta.jpeg",
+                vegeta:"assets/img/vegeta.jpg",
                 gohan:"assets/img/gohan.jpeg",
                 piccolo:"assets/img/piccolo.jpg",
                 krilin:"assets/img/krillin.jpg",
@@ -80,8 +81,9 @@
         </script>
 
         <br><br><br><br><br><br>
-        <section>
+        <section class="seccion">
             <h3>¿QUIERES INVOCAR A SHEN LONG?</h3>
+            <img src="assets/img/dragon.webp" alt="">
             <a href="https://cdn0.recetasgratis.net/es/posts/4/3/6/terremoto_chileno_74634_600_square.jpg" target="_blank" rel="noopener noreferrer">
                 <button class="btn-invocacion">CUMPLE MI DESEO</button>
             </a>
@@ -90,10 +92,10 @@
     </main>
 
     <aside class="sidebar">
-        <h3 class="sidebar__title">Noticias</h3>
+        <h3 class="sidebar__title">ANUNCIOS</h3>
         <ul class="sidebar__list">
-            <li class="sidebar__item">Novedades CSS 2025</li>
-            <li class="sidebar__item">Nuevas metodologías</li>
+            <li class="sidebar__item">Se buscan anuncios</li>
+            <li class="sidebar__item">🤑</li>
         </ul>
     </aside>
 
