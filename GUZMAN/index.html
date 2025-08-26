@@ -7,26 +7,41 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header style="background-color: rgb(0, 0, 0);">
-        <h1 style="font-size: 50px;">Bienvenido a mi página web</h1>
-    </header>
-    <nav>
-        <!-- ul>li*3>a -->
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Menú</a></li>
-            <li><a href="#">Contacto</a></li>
+    <!-- nav sería el bloque -->
+    <nav class="navbar">
+        <div class="navbar__logo">Mi sitio</div>
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a class="navbar__link" href="#">Inicios</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Temas</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Contacto</a></li>
         </ul>
     </nav>
-    <main>
-        <section>
-            <h2>Bienvenido</h2>
-            <p>Disfruta de la mejor página web del mundo.</p>
-            <button class="btn-contacto">Enviar mensaje</button>
+
+    <main class="content">
+        <!-- section>img+div>h2+p+a -->
+        <section class="card">
+            <img height="600" width="100" src="https://pbs.twimg.com/media/GRiZyLWbQAAXAS1?format=jpg&name=small" alt="No hace nada" class="card__image">
+            <div class="card__body">
+                <h2 class="card__title">Gatitos y CSS</h2>
+                <p class="card__text">Los gatos son cazadores al igual que otros animales, son de los felinos más pequeños. Hatsune Ijole.</p>
+                <a href="#" class="card__button card__button--primary">Leer más</a>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Somos el mejor país de Chile</p>
+    
+    <!-- aside.sidebar>h3.sidebar__title+ul.sidebar__list>li.sidebar__item*2 -->
+    <aside class="sidebar">
+        <h3 class="sidebar__title">Noticias</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">Novedades CSS 2025</li>
+            <li class="sidebar__item">Nuevas metodologías</li>
+        </ul>
+    </aside>
+
+    <!-- footer.footer>p.footer__text -->
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 MiSitio con BEM</p>
     </footer>
+
 </body>
 </html>
