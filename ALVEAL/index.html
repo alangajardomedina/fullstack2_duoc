@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    <!-- nav seria el bloque-->
+    <nav class="navbar">
+        <div class="navbar__logo">Mi sitio</div>
+        <ul>
+            <li class="navbar__menu"><a class="navbar__link" href="">Inicio</a></li>
+            <li class="navbar__menu"><a class="navbar__link" href="">Temas</a></li>
+            <li class="navbar__menu"><a class="navbar__link" href="">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section class="card">
+            <!-- section>img+div>h2+p+a -->
+            <img src="http://bloodborne.fandom.com/es/wiki/Emisario_celestial" alt="" class="card__image">
+            <div class="card__body">
+                <h2 class="card__title">pj de enemigo</h2>
+                <p class="card__text">aqui esta la representacion del terror absoluto</p>
+                <a href="#" class="card__button card__button--primary">Leer más</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- aside>h3+ul>li*2 mas clase añadido:
+        aside.sidebar>h3.sidebar__title+ul.sidebar__list>li.sidebar__item*2-->
+    <aside class="sidebar">
+        <h3 class="sidebar__title">Noticias</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">Novedades CSS 2025</li>
+            <li class="sidebar__item">Nuevas metodologias</li>
+        </ul>
+    </aside>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 Mi sitio piolardo con BEM</p>
+    </footer>
+
+</body>
+</html>
