@@ -3,43 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alarcon</title>
+    <title>Manito de gato</title>
+    <link rel="stylesheet" href="estilos.css">
 
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header{
-            background-color: red;
-        }
-        h1{
-            color: rgb(255,0, 255);
-            font-size: 50px;
-        }
-    </style>
 </head>
 <body>
-    <header style="background-color: aliceblue;">
-        <h1>Bienvenidos a mi pagina web</h1>
+    <header class="header">
+        <div class="menu container">
+            <img src="imagenes/logo.png" class="imglogo" alt="">
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="imagenes/menu.png" class="menu-icon" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Contactos</a></li>
+                </ul>
+            </nav>
+           <div>
+    <ul>
+        <li class="submenu">
+            <img src="imagenes/carrito.png" class="carrito">
+            <div class="carrito-dropdown">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>  
+                    <tbody>
+                        <!-- Productos se agregan dinámicamente -->
+                    </tbody>
+                </table>
+                <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+        </div>
+
+        <div class="header-content container">
+            <div class="header-imagen">
+                <img src="imagenes/jaboncarbonactyarcilla.png" class="header-imagen">
+
+            </div>
+
+            <div class="header-txt">
+                <h1>MANITO DE GATO</h1>
+                <p>Natural Beauty</p>
+                <a href="#" class="btn-1">informacion</a>
+            </div>
+
+        </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Menú</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h2>bienvenido</h2>
-            <p>Disfruta de la mejor pagina del mundo</p>
-            <button>Enviar mensaje</button>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025</p>
-    </footer>
+
+    <section class="ofert container">
+        <div class="oferta-img">
+            <img src="imagenes/pack 2.png" alt="">
+
+        </div>
+        <div class="ofer-txt">
+                <h2>PACK 1</h2>
+                <a href="#" class="btn-2">informacion</a>
+        </div>
+
+        <div class="oferta-img">
+            <img src="imagenes/pack1.png" alt="">
+
+        </div>
+        <div class="ofer-txt">
+                <h2>pack 2</h2>
+                <a href="#" class="btn-2"> informacion</a>
+        </div>
+
+         <div class="oferta-img">
+            <img src="imagenes/pack3.png" alt="">
+
+        </div>
+        <div class="ofer-txt">
+                <h2>Pack 3</h2>
+                <a href="#" class="btn-2">informacion</a>
+        </div>
+        
+    </section>
+
+   <main class="Productos container" id="lista-1">
+     <h2>Productos</h2>
+    <div class="Products-content">
+        <div class="Product">
+            <img src="imagenes/jaboncytrus.png" class="productimg">
+            <div class="Product-txt">
+                <h3>jaboncytrus</h3>
+                <p>mejor calidad</p>
+                <p class="Precio">$3000</p>
+                <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar Carrito</a>
+            </div>
+        </div>
+
+        <div class="Product">
+            <img src="imagenes/jabonaloe.png" class="productimg">
+            <div class="Product-txt">
+                <h3>jabon de Aloe vera</h3>
+                <p>mejor calidad</p>
+                <p class="Precio">$3000</p>
+                <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar Carrito</a>
+            </div>
+        </div>
+
+        <div class="Product">
+            <img src="imagenes/jaboncarbonactyarcilla.png" class="productimg">
+            <div class="Product-txt">
+                <h3>jabon carbon activado y arcilla</h3>
+                <p>mejor calidad</p>
+                <p class="Precio">$3000</p>
+                <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar Carrito</a>
+            </div>
+        </div>
+
+         <div class="Product">
+            <img src="imagenes/jabonaloe2.png" class="productimg">
+            <div class="Product-txt">
+                <h3>jabon de Aloe vera</h3>
+                <p>mejor calidad</p>
+                <p class="Precio">$3000</p>
+                <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar Carrito</a>
+            </div>
+        </div>
+
+        <div class="Product">
+            <img src="imagenes/balsamo2.png" class="productimg">
+            <div class="Product-txt">
+                <h3>Balsamo de karite</h3>
+                <p>mejor calidad</p>
+                <p class="Precio">$3000</p>
+                <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar Carrito</a>
+            </div>
+        </div>
+
+        <div class="Product">
+            <img src="imagenes/manecacacao.png" class="productimg">
+            <div class="Product-txt">
+                <h3>Manteca de cacao</h3>
+                <p>mejor calidad</p>
+                <p class="Precio">$3000</p>
+                <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar Carrito</a>
+            </div>
+        </div>
+
+         <div class="Product">
+            <img src="imagenes/balsamo.png" class="productimg">
+            <div class="Product-txt">
+                <h3>balsamo</h3>
+                <p>mejor calidad</p>
+                <p class="Precio">$3000</p>
+                <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar Carrito</a>
+            </div>
+        </div>
+
+        <div class="Product">
+            <img src="imagenes/mantca.png" class="productimg">
+            <div class="Product-txt">
+                <h3>Manteca</h3>
+                <p>mejor calidad</p>
+                <p class="Precio">$3000</p>
+                <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar Carrito</a>
+            </div>
+        </div>
+
+        <div class="Product">
+            <img src="imagenes/jabon3.png" class="productimg">
+            <div class="Product-txt">
+                <h3>jabon de rosas</h3>
+                <p>mejor calidad</p>
+                <p class="Precio">$3000</p>
+                <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar Carrito</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+    <section class="icons container">
+    <div class="icon-box">
+        <img src="imagenes/kitafodo2-Photoroom.png" class="iconimg">
+        <div class="icon-txt">
+            <p>Ecofriendly</p>
+        </div>
+    </div>
+
+    <div class="icon-box">
+        <img src="imagenes/kitafondo-Photoroom.png" class="iconimg">
+        <div class="icon-txt">
+            <p>Amable con el medio ambiente</p>
+        </div>
+    </div>
+
+    <div class="icon-box">
+        <img src="imagenes/kitafondo3-Photoroom.png" class="iconimg">
+        <div class="icon-txt">
+            <p>Hecho con amor</p>
+        </div>
+    </div>
+
+    <div class="icon-box">
+        <img src="imagenes/kitafondo4-Photoroom.png" class="iconimg">
+        <div class="icon-txt">
+            <p>vegan</p>
+        </div>
+    </div>
+</section>
+
+
+    <section class="blog container">
+        <div class="blog-1">
+            <img src="" alt="">
+            <h3>sobre nosotros</h3>
+            <p>
+Somos un emprendimiento dedicado a ofrecer <strong>tratamientos naturales</strong> elaborados con ingredientes seleccionados de la más alta calidad.  
+Creemos en el cuidado de las personas y del planeta, por eso todos nuestros productos son <strong>eco-friendly</strong>, libres de químicos dañinos y elaborados de forma responsable.  
+Llevamos con orgullo los sellos de <strong>productos naturales, sostenibles y cruelty free</strong>, reafirmando nuestro compromiso con tu bienestar y con la naturaleza. 🌿  
+</p>
+        </div>
+
+
+
+    </section>
+
+    <footer class="footer">
+    <div class="footer-content container">
+
+        <!-- Zona de comentarios -->
+        <div class="comentarios">
+            <h3>Déjanos tu comentario</h3>
+            <textarea placeholder="Escribe tu mensaje..."></textarea>
+            <button>Enviar</button>
+        </div>
+
+        <!-- Redes sociales con imágenes -->
+        <div class="redes">
+            <a href="https://wa.me/tu-numero" target="_blank">
+                <img src="imagenes/wasa.png" alt="WhatsApp" class="red-icon">
+            </a>
+            <a href="https://www.instagram.com/tuusuario" target="_blank">
+                <img src="imagenes/instagram.png" alt="Instagram" class="red-icon">
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+
+ <script src="scrip.js"> </script>
 </body>
 </html>
