@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">Mi Sitio</div>
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a class="navbar_link" href="#">Inicio</a>
+            <li class="navbar__item"><a class="navbar_link" href="#">Tema</a>
+            <li class="navbar__item"><a class="navbar_link" href="#">Contacto</a>
+        </ul>
+    </nav>
+
+    <main>
+        <!--section>img+div>h2+p+a-->
+        <div class="container py-4">
+            <div class="card__body">
+                <h2 class="h5 text-secondary">Mensaje Dinamico</h2>
+                <div class="input-group mb-3">
+                    <input class="form-control" type="text " id="nombreImput">
+                    <button class="btn btn-outline-primary" id="btnSaludar">Saludar</button>
+                </div>
+                <p id="mensaje" class="fw-bold text-success">---</p>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h2 class="h5 text-secondary">Contador</h2>
+                <div class="d-flex gap-2 mb-3">
+                    <button class="btn btn-success" id="btnIncrementar">Incrementar</button>
+                    <button class="btn btn-outline-danger" id="btnResetear">Resetear</button>
+                </div>
+                <p class="mb-0">Valor Actual: <span class="fw-bold" id="Contador">0</span></p>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h2 class="h5 text-secondary">Mini lista</h2>
+                <div class="input-group mb-3">
+                    <input placeholder="Ingrese una tarea" class="form-control" type="text" id="tareaImput">
+                    <button class="btn btn-primary" id="btnAgregarTarea">Agregar tarea</button>
+                </div>
+                <ul class="list-group" id="listaTareas"></ul>
+            </div>
+        </div>
+        <section class="card">
+            <img class="card__image"src="https://preview.redd.it/absolute-cinema-v0-svl0xo8arjce1.jpeg?auto=webp&s=00af68c62ce532516d274374c1b1df5149e59c7d" alt="" class="card__image">
+            <div class="card__body">
+                <h2 class="card_title"></h2>
+                <p class="card__text">MIIIIIIKUUUUUUUUUU MIIIIIIIIIKUUUUUUUUU UUUUUUIIIIIIIUUUUUUUUUU</p>
+                <a href="" class="card_button card__button--primary">Descubre mas aqui</a>
+            </div>
+        </section>
+    </main>
+
+    <!--aside>h3+ul>li*2-->
+    <aside class="sidebar">
+        <h3 class="sidebar__title">Noticias</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">Novedades CSS 2025</li>
+            <li class="sidebar__item">Nuevas metodologias</li>
+        </ul>
+    </aside>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 MiSitio con BEM</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
