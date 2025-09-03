@@ -235,3 +235,77 @@ body{
         align-items: center;
     }
 }
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "nav nav"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    min-height: 100vh;
+    background-image: url('./assets/img/fondo tren star rail.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+
+
+/* Contenedor general para el carrusel, centrado */
+.carrusel-container {
+    grid-area: main; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilos del carrusel */
+
+.carrusel {
+    width: 600px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.carrusel img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 7s infinite;
+}
+
+/* Animación para cada imagen */
+.carrusel img:nth-child(1) {
+    animation-delay: 7s;
+}
+
+.carrusel img:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.carrusel img:nth-child(3) {
+    animation-delay: 8s;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    33% {opacity: 1;}
+    43% {opacity: 0;}
+    100% {opacity: 0;}
+}

@@ -7,9 +7,12 @@
     <title>Honkai Star Rail</title>
     <link rel="icon" href="./assets/img/icon star rail.png">
     <link rel="stylesheet" href="estilos.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 </head>
 
 <body>
+    
+    
 
     <!--nav sería el bloque-->
     <nav class="navbar">
@@ -20,7 +23,43 @@
             <li class="navbar__item"><a class="navbar__link" href="https://youtu.be/xsvZOUnXdWM">Contacto</a></li>
         </ul>
     </nav>
+   
+     <main class="content">
+        <div class="container py-4">
+            <div class="card-body">
+                <h2 class="h5" text-secondary style="color:rgb(228, 155, 228)">BIENVENIDO :D ARREGLAR </h2>
+                <div class="input-group mb-3">
+                    <input class="form-control" id="nombreInput" placeholder="Escribe tu nombre">>
+                    <button class="btn btn-primary" id="btnSaludar">Saludar</button>
+                </div>
+                <p id="mensaje" class="fw-bold text-success">----------------------------</p>
+            </div>
+        </div>
 
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h2 class="h5 text-secondary">Contador ARREGLAR</h2>
+                <div class="d-flex gap-2 mb-3">
+                    <button class="btn btn-success" id="btnIncrementar">Incrementar</button>
+                    <button class="btn btn-outline-danger" id="btnResetear">Resetear</button>
+                    <p>Valor actual: <span id="contador"></span> </p>
+                </div>
+                <p class="mb-0">Valor actual <span class="fw-bold" id="contador">0</span></p>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h2 class="h5 text-secondary">Mini lista ARREGLAR</h2>
+                <div class="input-group mb-3">
+                    <input placeholder="" class="btn card__button--primary" type="text" id="tareaInput">
+                    <button class="btn btn-primary" id="btnAgregar">agregar tarea</button>
+                </div>
+                <ul id="listaTareas" class="list-group"></ul>
+            </div>
+        </div>
+     </main>
+     
 
 
     <!-- GIF de carga inicial -->
@@ -70,7 +109,7 @@
         }
     </script>
     
-    <main class="content">
+    <!--<main class="content">
         <section class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJVIPv1HlQyzIDFLpyBIy_-bqKJGPiBUh0XYZTBHxNPRie1VkyE4O7t6WS-FJQa3EtVa4&usqp=CAU" alt="mimikyu card" class="card_image">
             <div class="card__body">
@@ -79,15 +118,26 @@
                 <a href="" class="card__button card__button--primary">leer más</a>
             </div>
         </section>
-    </main>
+    </main>-->
 
-    <aside class="sidebar">
+    <!--<aside class="sidebar">
         <h3 class="sidebar__title">Noticias</h3>
         <ul class="sidebar__list">
             <li class="sidebar__item">Novedades</li>
             <li class="sidebar__item">Nuevas metodologías</li>
         </ul>
-    </aside>
-   
+    </aside>-->
+     
+    <div class="carrusel-container">
+        <div class="carrusel">
+          <img src="https://img2.tapimg.net/post/images/FgtBNRdOszzMox_SauIDgsj90c0a.webp?imageMogr2/thumbnail/720x9999%3E/quality/80/format/jpg/interlace/1/meta-keep-list/VXNlckNvbW1lbnQ%3D/ignore-error/1&t" alt="Imagen 1" />
+          <img src="https://s3.getstickerpack.com/storage/uploads/sticker-pack/honkai-star-rail-meme-stickers-1/tray_large.png?adb7e5560a227c6902871e0c8b647376&d=200x200" alt="Imagen 2" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp3b8rpiWmjUX0F-bFG-Re0D-umPWHGd1leQ&s" alt="Imagen 3" />
+        </div>
+      </div>
+      
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
