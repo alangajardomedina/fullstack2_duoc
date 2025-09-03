@@ -6,6 +6,7 @@
     <title>Trivia</title>
     <link rel="icon" href="assets/img/kirby.png">
     <link rel="stylesheet" href="assets/css/trivia.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar">
@@ -16,7 +17,42 @@
             <li class="navbar__item"><a class="navbar__link" href="#">Contacto</a></li>
         </ul>
     </nav>
+
     <main class="content">
+        <!-- Aquí vamos a agregar nuestro ejemplo de JS -->
+        <div class="card py-4">
+            <div class="card-body">
+                <h2 class="h5 text-secondary">Mensaje dinamico</h2>
+                <div class="input-group mb-3">
+                    <input class="form-control" type="text" id="ipn_mensaje_dinamico">
+                    <button class="btn btn-primary" id="btn_saludar">Saludar</button>
+                </div>
+                <p class="fw-bold text-success" id="txt_mensaje">---</p>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h2 class="h5 text-secondary">Contador</h2>
+                <div class="d-flex gap-2 mb-3">
+                    <button class="btn btn-success" id="btn_incrementar">Incrementar</button>
+                    <button class="btn btn-outline-danger" id="btn_resetear">Resetear</button>
+                </div>
+                <p class="mb-0">Valor Actual: <span class="fw-bold" id="txt_contador">0</span></p>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h2 class="h5 text-secondary">Mini lista</h2>
+                <div class="d-flex gap-2 mb-3">
+                    <input placeholder="Ingrese una tarea" class="form-control" type="text" id="inp_tarea">
+                    <button class="btn btn-primary" id="btn_agregar">Agregar tarea</button>
+                </div>
+            </div>
+            <ul id="ul_lista_tareas" class="list-group"></ul>
+        </div>
+
         <section class="card">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Paintedcats_Red_Star_standing.jpg/250px-Paintedcats_Red_Star_standing.jpg" 
                 alt="gato" class="card__image">
@@ -27,6 +63,7 @@
             </div>
         </section>
     </main>
+
     <aside class="sidebar">
         <h3 class="sidebar__title">Noticias</h3>
         <ul class="sidebar__list">
@@ -34,8 +71,12 @@
             <li class="sidebar__item">Nuevas metodologías</li>
         </ul>
     </aside>
+
     <footer class="footer">
         <p class="footer__text">&copy; 2025 MiSitio con BEM</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
