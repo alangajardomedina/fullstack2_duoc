@@ -28,14 +28,36 @@
     <!--INICIO DEL CUERPO PRINCIPAL-->
     <main class="content">
         <!--Aqui vamos a agregar nuestro ejemplo de javaScript-->
-        <div>
-            <div>
-                <h2>Mensaje super hiper mega importante</h2>
-                <div>
-                    <input type="text" id="nombreImput">
-                    <button id="btnSaludar">Me cago en todo</button>
+        <div class="container py-4">
+            <div class="card-body">
+                <h2 class="h5">Dinamic</h2>
+                <div class="input-group mb-3">
+                    <input class="form-control"type="text" id="nombreImput">
+                    <button class="btn btn-outline-secondary" id="btnSaludar">Me cago en todo</button>
                 </div>
                 <p id="mensaje"></p>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h2 class="h5 text-secondary"></h2>
+                <div>
+                    <button class="btn btn-success"id="btnIncrementar">Incrementar</button>
+                    <button class="btn btn-outline-danger"id="btnResetear">Resetear</button>
+                </div>
+                <p>Valor actual: <span id="contador">0</span></p>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h2 class="h5 text-secondary">Lista de tareas</h2>
+                <div class="input-group mb-3">
+                    <input placeholder="Ingresar elemento" type="text" id="tareaInput" class="form-control">
+                    <button class="btn btn-primary" id="btnAgregar">Agregar</button>
+                </div>
+                <ul id="listaTareas" class="list-group">Lista de tareas</ul>
             </div>
         </div>
         <section class="card">
@@ -62,6 +84,7 @@
         <p class="footer__text">&copy; 2025 El mejor sitio web del mejor pais de Chile</p>
     </footer>
 
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
