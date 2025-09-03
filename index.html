@@ -7,6 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fullstack II</title>
     <link rel="icon" href="assets/img/icon.png">
+    <style>
+        .ol-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18ch, 1fr));
+        gap: .75rem 1rem;
+        margin: 1rem 0;
+        padding-left: 1.2rem;   /* para el marcador */
+        }
+
+        .ol-grid li{
+        background: #f8f9fb;
+        border: 1px solid #e7e9ee;
+        border-radius: .75rem;
+        padding: .6rem .75rem .6rem 2.2rem;
+        position: relative;
+        list-style: none; /* ocultamos el marcador por defecto */
+        }
+        .ol-grid li a{
+            text-decoration: none;
+        }
+
+        /* Número “bonito” a la izquierda */
+        .ol-grid li::before{
+        counter-increment: item;
+        content: counter(item) ".";
+        position: absolute;
+        left: .75rem;
+        top: .6rem;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+        opacity: .65;
+        }
+
+        /* Iniciar el contador del <ol> */
+        .ol-grid{
+        counter-reset: item;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,19 +52,20 @@
     <header>
         <h1>Nuestra página web</h1>
         <p>Aqui vamos a trabajar todo lo necesario del ramo</p>
+        <p>Página del profe: <a href="GAJARDO/index.html">Alan Gajardo</a></p>
     </header>
     <nav>
-        <ol>
+        <ol class="ol-grid">
             <li><a href="ALARCON/index.html">ALARCON</a></li>
             <li><a href="ALVEAL/index.html">ALVEAL</a></li>
-            <li><a href="ARELLANOG/index.html">ARELLANO</a></li>
-            <li><a href="ARELLANOR/index.html">ARELLANO</a></li>
+            <li><a href="ARELLANOG/index.html">ARELLANO GALLARDO</a></li>
+            <li><a href="ARELLANOR/index.html">ARELLANO RAMOS</a></li>
             <li><a href="CASTILLO/index.html">CASTILLO</a></li>
             <li><a href="DELGADO/index.html">DELGADO</a></li>
             <li><a href="ESCALONA/index.html">ESCALONA</a></li>
             <li><a href="ESPINOSA/index.html">ESPINOSA</a></li>
-            <li><a href="GUTIERREZI/index.html">GUTIERREZ</a></li>
-            <li><a href="GUTIERREZA/index.html">GUTIERREZ</a></li>
+            <li><a href="GUTIERREZI/index.html">GUTIERREZ IGNACIO</a></li>
+            <li><a href="GUTIERREZA/index.html">GUTIERREZ ALAN</a></li>
             <li><a href="GUZMAN/index.html">GUZMAN</a></li>
             <li><a href="HUARAPIL/index.html">HUARAPIL</a></li>
             <li><a href="HUINCA/index.html">HUINCA</a></li>
@@ -37,8 +76,8 @@
             <li><a href="NOVOA/index.html">NOVOA</a></li>
             <li><a href="ORMENO/index.html">ORMENO</a></li>
             <li><a href="PENALOZA/index.html">PENALOZA</a></li>
-            <li><a href="PEREZS/index.html">PEREZ</a></li>
-            <li><a href="PEREZC/index.html">PEREZ</a></li>
+            <li><a href="PEREZS/index.html">PEREZ SCARLETH</a></li>
+            <li><a href="PEREZC/index.html">PEREZ CRISTOBAL</a></li>
             <li><a href="RETAMAL/index.html">RETAMAL</a></li>
             <li><a href="ROJAS/index.html">ROJAS</a></li>
             <li><a href="SAEZ/index.html">SAEZ</a></li>
