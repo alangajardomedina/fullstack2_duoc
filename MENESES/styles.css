@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Comic Neue', cursive;
+  background: url("https://images.alphacoders.com/139/1396111.jpg") repeat;
+  background-size: 200px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #000;
+  background: rgba(255,255,255,0.8);
+  padding: 10px;
+}
+
+header {
+  text-align: center;
+  background: #0f0f0f;
+  color: white;
+  padding: 2rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 3px 3px 0px black;
+  animation: bounce 1.5s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0);}
+  to { transform: translateY(-10px);}
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  margin: 0 12px;
+  padding: 10px 20px;
+  background: #ffeb3b;
+  border: 3px solid black;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: transform .2s;
+  display: inline-block;
+  position: relative;
+}
+
+nav a:hover {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+nav a::after {
+  content: "★";
+  position: absolute;
+  top: -15px; right: -15px;
+  font-size: 20px;
+  color: #ff3c64;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: white;
+  border: 3px solid black;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 280px;
+  text-align: center;
+  position: relative;
+  transition: transform .3s;
+}
+
+.card:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+.card img {
+  width: 100%;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin-bottom: .5rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  margin: .5rem 0;
+  color: #ff3c64;
+  text-shadow: 2px 2px 0px black;
+}
+
+.onomato {
+  position: absolute;
+  top: -20px; left: -10px;
+  background: yellow;
+  padding: 6px 12px;
+  border: 3px solid black;
+  border-radius: 6px;
+  font-weight: bold;
+  transform: rotate(-10deg);
+  animation: wiggle 1s infinite;
+}
+
+@keyframes wiggle {
+  0%{transform:rotate(-10deg);}
+  50%{transform:rotate(10deg);}
+  100%{transform:rotate(-10deg);}
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'Comic Neue', cursive;
+  padding: 15px;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}
+
+footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: bold;
+}

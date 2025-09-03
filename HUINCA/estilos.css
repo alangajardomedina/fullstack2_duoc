@@ -1,41 +1,121 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-areas: 
+        "nav nav"
+        "main aside"
+        "footer footer";
 
-        /*Selector general*/
-        body{
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            margin: 1;
-            padding: 0;
-        }
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    min-height: 100vh;
+}
 
-        header{
-            background-color: rgb(151, 218, 160);
-        }
+/*navbar*/
 
-        .btn-contacto{
-            background-color: rgb(151, 218, 160);
-            color: black;
-            border-radius: 12px;
-            border-color: cadetblue;
-            font-size: 15px;
-        }
-        .btn-contacto:hover{
-            background-color: rgb(34, 139, 13);
-        }
+.navbar{
+    grid-area: nav;
+    background: #337227;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem
+    ;
+}
 
-        nav ul{
-            display: flex; /* Con este ajuste se permiten ajustes mas flexibles, o si no quedarian como el principio*/
-            justify-content: space-between; /* Esto hace una separacion igualitaria de los items: Inicio, menú y contacto*/
-        }
+.navbar__logo{
+    font-weight: bold;
+}
 
-        @media(max-width:705px){
-            .btn-contacto{
-                font-size: 15px;
-            }
-        }
-        @media(max-width:705px){
-            nav ul{
-                display: block;
-                justify-content: center;
-            }
-        }
+.navbar__menu{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
 
+.navbar__link{
+    color: aliceblue;
+    text-decoration: none;
+}
 
+/*Card*/
+.card{
+    grid-area: main;
+    background: #bbf0b1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+}
+
+.card__image{
+    width: 100%;
+    padding: 1px;
+}
+
+.card__body{
+    padding: 1rem;
+}
+
+.card__title{
+    margin: 0;
+}
+
+.card__text{
+    margin: 1rem 0;
+}
+
+.card__button{
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer; /*Iconos cuando se pasa el cursor por encima*/
+    text-decoration: none;
+}
+
+.card__button--primary{
+    background: #ffffff;
+    color: black;
+    border-radius: 25px;
+}
+
+/*Side bar*/
+
+.sidebar{
+    grid-area: aside;
+    background: #809977;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/*Footer*/
+.footer{
+    grid-area: footer;
+    text-align: center;
+    background: #363836;
+    color: #ffffff;
+    padding: 1rem;
+}
+
+/*Responsividad*/
+@media(max-width: 400px){
+    body{
+        grid-template-areas: 
+            "nav"
+            "main"
+            "aside"
+            "footer";
+            grid-template-columns: 1fr;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar__menu{
+        flex-direction: column;
+        align-items: center;
+    }
+}

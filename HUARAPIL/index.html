@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paginita H </title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header style="background-color: rgb(180, 128, 228);">
-        <h1 style="color: rgb(52, 8, 94); font-size: 50px;">Bienvenide sepe estepede</h1>
-
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Menú</a></li>
-            <li><a href="#">Contacto</a></li>
+    <nav class="navbar">
+        <div class="navbar__logo"> mi sitio</div>
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a class= "navbar__link" href="#">Inicio</a></li>
+            <li class="navbar__item"><a class= "navbar__link" href="#">Menú</a></li>
+            <li class="navbar__item"><a class= "navbar__link" href="#">Contacto</a></li>
         </ul>
     </nav>
-    <main>
-        <section>
-            <h2>Reinona</h2>
-            <p>Disfruta mi paginita</p>
-            <button class="btm-contacto">Enviar mesingerr</button>
+    <main class="content">
+        <section class="card">
+            <img src="https://preview.redd.it/meme-de-gato-v0-krd7xsbs9dvc1.jpeg?auto=webp&s=87ba53c53f3727203c5fee4ac781815cfe95858a" alt="Gatit0o" width="100px" class="card__image">
+            <div class="card__body">
+                <h2 class="class__title"> Gatito y css</h2>
+                <p class="card__text"> Gatito con ceja levantada jejeje</p>
+                <a href="#" class="card__button card__button--primary">Leer más</a>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 devoraste slay 😽💋</p>
+
+    <aside class="sidebar">
+        <h3 class="sidebar__title">Noticias</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">Novedades CSS 2025</li>
+            <li class="sidebar__item">Nuevas metodologias</li>
+        </ul>
+    </aside>
+    <footer class="footer">
+        <p class="footer__text">&copy; Misitio con todu BEM</p>
     </footer>
 </body>
 </html>

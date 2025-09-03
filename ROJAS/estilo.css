@@ -1,0 +1,58 @@
+body {
+    /*Selector general*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("img/fondo.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;           
+}
+header{
+    color:white; background-color: rgba(0, 0, 0, 0.5);
+}
+header p{
+    color: white;
+}   
+
+h1{
+    padding: 10px;
+}
+.btn-invocacion{
+    background-color: rgba(234, 234, 234, 0.479);
+    color: black;
+    border-radius: 50px;
+    border-color: black;
+    font-size: 30px;
+}
+.btn-invocacion:hover{
+    background-color: rgba(0, 0, 0, 0.829);
+}
+nav{
+    color: rgba(255, 255, 255, 0);background-color: rgba(0, 0, 0, 0.767); 
+}
+nav ul{
+    display:flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 10px;
+}
+@media(max-width:510px){
+    nav ul{
+        display: block;
+    }
+}
+section h3{
+    color:white; background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer{
+    padding: 100px
+}
+
+footer p{
+    color: white; background-color: rgba(0, 0, 0, 0.5);
+}
+p {
+  color: #f0efef;
+}

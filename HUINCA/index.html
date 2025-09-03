@@ -10,31 +10,37 @@
 </head>
 
 <body>
+    <!-- nav seria mi bloque-->
+    <nav class="navbar">
+        <div class="navbar__logo">Mi pagina</div>
 
-    <header style="background-color: rgb(151, 218, 160) ;">
-        <h1 style="color: rgb(10, 37, 24); font-size: 40px;"> Hola bienvenido a mi pagina</h1>
-
-    </header>
-
-    <nav>
-        <ul>
-            <li> <a href="#">Inicio</a> </li>
-            <li> <a href="#">Menú</a> </li>
-            <li> <a href="#">Contacto</a> </li>
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a class="navbar__link" href="#">Inicio</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Telefono</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Contacto</a></li>
         </ul>
     </nav>
 
-    <main>
-        <section>
-            <h3>Hola guenas</h3>
-            <p>Sientase seguro y disfrute de mi pagina web.</p>
-            <button class="btn-contacto">Enviar mensaje</button> <!-- la class = "" es como darle un nombre a un elemento-->
-
-        </section>
+    <main class="content">
+        <section class="card">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/dewey-malcolm-fotogramas-1626112299.jpg?crop=0.870xw:0.755xh;0.0465xw,0.0153xh&resize=1200:*" width="100px" alt="dewey" class="card__image">
+            <div class="card__body">
+                <h2 class="card__title">Dewey vs CSS</h2>
+                <p class="card__text">Una lucha complicada pero inspirante.</p>
+                <a href="#" class="card__button card__button--primary">Leer más</a>
+            </div>
     </main>
-    
-    <footer>
-        <p> &copy; Los derechos estan reservados😉</p>
+
+    <aside class="sidebar">
+        <h3 class="sidebar__title">Noticias</h3>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">Actualizaciones personajes</li>
+            <li class="sidebar__item">Nuevas metodologias</li>
+        </ul>
+    </aside>
+
+    <footer class="footer">
+        <p class="footer__text">&copy 2025 Todos los derechos reservados</p>
     </footer>
 
 </body>

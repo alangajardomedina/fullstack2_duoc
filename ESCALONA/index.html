@@ -13,24 +13,42 @@
         <h1 class="titulo">UltraBienvenida</h1>
     </header>
     <!--INICIO DEL NAVEGACION-->
-    <nav>
-        <ul>
-            <p><a href="#">Inicio</a></p>
-            <p><a href="#">Menu</a></p>
-            <p><a href="#">Contacto</a></p>
-        </ul>
+    <nav class="nav">
+        <!--ul-->
+        <div class="nav__logo">
+            <ul class="nav__menu"> 
+                <li class="nav__item"><a class="nav__link" href="../index.html">Inicio</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Menu              </a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Contacto          </a></li>
+            </ul>
+            
+        </div>
+        <!--ul-->
     </nav>
     <!--INICIO DEL CUERPO PRINCIPAL-->
-    <main>
-        <section>
-            <h2>Cuerpo</h2>
-            <p>Alguna vez has visto algo tan increible?</p>
-            <button class="btn-contacto">Enviar mensaje</button>
+    <main class="content">
+        <section class="card">
+            <img src="https://spinning.fish/fish.gif" alt="Alguna vez has visto algo tan increible?" class="card__img">
+            <div class="card__body">
+                <h2 class="card__title">Cuerpo</h2>
+                <p class="card__text">Alguna vez has visto algo tan increible?</p>
+                <a class="card__button card__button--primary">Hacer nada</a>
+            </div>
         </section>
+
     </main>
+
+    <!--aside.sidebar>h3.sidebar__title+ul.sidebarr__list>li.sidebar__item*2-->
+    <aside class="sidebar">
+        <h3 class="sidebar__title">Noticias</h3>
+        <ul class="sidebarr__list">
+            <li class="sidebar__item">Novedades CSS 2025</li>
+            <li class="sidebar__item">Nuevas metodologías</li>
+        </ul>
+    </aside>
     <!--INICIO DEL PIE DE PAGINA-->
-    <footer>
-        <p>&copy; 2025 El mejor continente de Chile</p>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 El mejor sitio web del mejor pais de Chile</p>
     </footer>
 </body>
 </html>

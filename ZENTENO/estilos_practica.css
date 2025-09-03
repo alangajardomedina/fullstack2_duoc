@@ -1,0 +1,118 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: grid; 
+    grid-template-areas:
+        "nav nav"
+        "main aside"
+        "footer footer"; /* define las áreas del grid */
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    min-height: 100vh; /* asegura que el cuerpo ocupe toda la altura de la ventana*/
+}
+
+/*navbar*/
+.navbar{
+    grid-area: nav; /* que el grid area sea navbar*/
+    background: #a885c4;
+    color: #ffffff;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.navbar__logo{
+    font-weight: bold; /*hace que el logo sea mas grueso*/
+}
+
+.navbar__menu{
+    list-style: none; /*elimina los puntos de la lista*/
+    display: flex;
+    gap: 1rem; /*espacio entre los elementos del menu*/
+}
+
+.navbar__link{
+    color: #ffffff;
+    text-decoration: none ;
+}
+
+/*Card*/
+.card{
+    grid-area: main; /* que el grid area sea card*/
+    background: #fff0fe;
+    border-radius: 10px;
+    overflow: hidden; /*esconde el contenido que se sale del borde*/
+    box-shadow: 0 4px 6px rgb(131, 76, 113);
+}
+
+.card__image{
+    width: 100%;
+    display:block; /* hace que la imagen ocupe todo el ancho del contenedor */
+}
+
+.card__body{
+    padding: 1rem;
+}
+
+.card__title{
+    margin:0;
+}
+
+.card__text{
+    margin: 1rem 0;
+}
+
+.card__button{
+    padding: 0.5rem 1rem;
+    border:none;
+    cursor: pointer; /* cambia el cursor al pasar por encima del boton */
+    text-decoration: none;
+
+
+}
+
+.card__button--primary{
+    background: #a885c4;
+    color: #fff0fe;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(121, 71, 104);
+}
+
+/*Sidebar*/
+.sidebar{
+    grid-area: aside; /* que el grid area sea sidebar*/
+    background: #fbf0ff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgb(131, 76, 113);
+}
+
+/*footer*/
+.footer{
+    grid-area: footer; /* que el grid area sea footer*/
+    text-align: center;
+    background: #a885c4;
+    color:#ffffff;
+    padding: 1rem;
+}
+
+/*responsibidad*/
+@media(max-width: 400px){
+    body{
+        grid-template-areas: 
+        "nav"
+        "main"
+        "aside"
+        "footer"; /* cambia las áreas del grid para pantallas pequeñas */
+        grid-template-columns: 1fr; /* una sola columna */
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: center; /* centra los elementos de la navbar */
+    }
+    .navbar__menu{
+        flex-direction: column; /* cambia la dirección del menu a columna */
+        align-items: center; /* centra los elementos del menu */
+    }
+}
