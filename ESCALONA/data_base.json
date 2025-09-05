@@ -1,0 +1,37 @@
+[
+    {
+        "id":           1,
+        "nombre":       "Torta de chocolate",
+        "categoria":    "Torta",
+        "precio":       35000,
+        "imagen":       "assets/img/torta_chocolate.jpg"
+    },
+    {
+        "id":           2,
+        "nombre":       "Torta de manjar",
+        "categoria":    "Torta",
+        "precio":       40000,
+        "imagen":       "assets/img/torta_manjar.jpg"
+    },
+    {
+        "id":           3,
+        "nombre":       "Torta de vainilla",
+        "categoria":    "Torta",
+        "precio":       30000,
+        "imagen":       "assets/img/torta_vainilla.jpg"
+    },
+    {
+        "id":           4,
+        "nombre":       "Torta de frutilla",
+        "categoria":    "Torta",
+        "precio":       25000,
+        "imagen":       "assets/img/torta_frutilla.jpg"
+    },
+    {
+        "id":           5,
+        "nombre":       "Helado de chocolate",
+        "categoria":    "Helado",
+        "precio":       3000,
+        "imagen":       "assets/img/helado_chocolate.jpg"
+    }
+]
