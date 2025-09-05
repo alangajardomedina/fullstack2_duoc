@@ -24,7 +24,20 @@
         </ul>
     </nav>
    
-     <main class="content">
+
+     <main class="content"></main>
+      <div class="container py-4">
+          <h1 class="text-center text-primary mb-4">こんにちは</h1>
+
+          <div class="text-center mb-4">
+              <button id="btnCargar" class="btn btn-success me-2">Cargar Productos</button>
+              <button id="btnFiltrar"  class="btn btn-outline-primary">Filtrar electronica</button>
+          </div>
+
+          <div id="productosContainer" class="row g-4"></div>
+      </div>
+
+     <!--<main class="content">
         <div class="container py-4">
             <div class="card-body">
                 <h2 class="h5" text-secondary style="color:rgb(228, 155, 228)">BIENVENIDO :D ARREGLAR </h2>
@@ -34,9 +47,9 @@
                 </div>
                 <p id="mensaje" class="fw-bold text-success">----------------------------</p>
             </div>
-        </div>
+        </div>-->
 
-        <div class="card mb-4 shadow-sm">
+       <!--- <div class="card mb-4 shadow-sm">
             <div class="card-body">
                 <h2 class="h5 text-secondary">Contador ARREGLAR</h2>
                 <div class="d-flex gap-2 mb-3">
@@ -58,7 +71,7 @@
                 <ul id="listaTareas" class="list-group"></ul>
             </div>
         </div>
-     </main>
+     </main>-->
      
 
 
@@ -86,10 +99,7 @@
         </section>
     </div>
 
-    <!-- abajo de la página -->
-    <footer class="footer">
-        <p class="footer__text">Todos los derechos reservados &reg;</p>
-    </footer>
+  
 
     <script>
         // Muestra el contenido después de 3 segundos de carga
@@ -108,6 +118,7 @@
             document.getElementById('gif-mostrado').style.display = 'block';
         }
     </script>
+
     
     <!--<main class="content">
         <section class="card">
@@ -128,11 +139,16 @@
         </ul>
     </aside>-->
      
+    <!-- abajo de la página -->
+    <footer class="footer">
+        <p class="footer__text">Todos los derechos reservados &reg;</p>
+    </footer>
+
     <div class="carrusel-container">
         <div class="carrusel">
-          <img src="https://img2.tapimg.net/post/images/FgtBNRdOszzMox_SauIDgsj90c0a.webp?imageMogr2/thumbnail/720x9999%3E/quality/80/format/jpg/interlace/1/meta-keep-list/VXNlckNvbW1lbnQ%3D/ignore-error/1&t" alt="Imagen 1" />
-          <img src="https://s3.getstickerpack.com/storage/uploads/sticker-pack/honkai-star-rail-meme-stickers-1/tray_large.png?adb7e5560a227c6902871e0c8b647376&d=200x200" alt="Imagen 2" />
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp3b8rpiWmjUX0F-bFG-Re0D-umPWHGd1leQ&s" alt="Imagen 3" />
+          <img src="https://s3.getstickerpack.com/storage/uploads/sticker-pack/honkai-star-rail-meme-stickers-1/tray_large.png?adb7e5560a227c6902871e0c8b647376&d=200x200" alt="Imagen 1" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp3b8rpiWmjUX0F-bFG-Re0D-umPWHGd1leQ&s" alt="Imagen 2" />
+          <img src="https://i.ytimg.com/vi/f4G4yqHGY3c/maxresdefault.jpg" alt="Imagen 3" />
         </div>
       </div>
       

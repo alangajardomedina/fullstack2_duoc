@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nombre": "SMARTPHONE PRO MAX",
+        "categoria": "Electronica",
+        "precio": 450,
+        "imagen": "https://i.blogs.es/0338cc/fisher-price-telefono-de-verdad-bluetooth/650_1200.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "ZAPATILLAS DEPORTIVAS",
+        "categoria": "ropa",
+        "precio": 80,
+        "imagen": "https://i.ebayimg.com/images/g/Nz4AAOSwWJJj2P57/s-l400.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "LAPTOP PRO 15",
+        "categoria": "ropa",
+        "precio": 150,
+        "imagen": "https://www.hites.com/dw/image/v2/BDPN_PRD/on/demandware.static/-/Sites-mastercatalog_HITES/default/dw3a0a0c4b/images/original/mkp/1019300017500/10193000175001_5.jpg?sw=1000&sh=1000"
+    }
+]
