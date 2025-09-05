@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "nombre":"Celular ProMaxMMORPG",
+        "categoria":"Electrónica",
+        "precio":500,
+        "imagen":"https://media.falabella.com/falabellaCL/80057253_2/w=800,h=800,fit=pad"
+    },
+    {
+        "id":2,
+        "nombre":"Zanco Electrico",
+        "categoria":"Electrónica",
+        "precio":100,
+        "imagen":"https://cdnx.jumpseller.com/mgm-importaciones/image/46711535/Mesa_de_trabajo_1sancos.jpg?1710870421"
+    },
+    {
+        "id":3,
+        "nombre":"Polera Comestible",
+        "categoria":"Ropa",
+        "precio":45,
+        "imagen":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBS7VCXNr_MS5GTCFLGKFPoJFGCuE7vSDiZQ&s"
+    },
+    {
+        "id":4,
+        "nombre":"Zapato Chancla",
+        "categoria":"Ropa",
+        "precio":1,
+        "imagen":"https://http2.mlstatic.com/D_NQ_NP_874258-MLC71935336847_092023-O-sandalia-chala-de-hombre-zapato-verano-eco-cuero-envio-grati.webp"
+    }
+]
