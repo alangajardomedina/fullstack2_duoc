@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "Smartphone",
+        "categoria": "Electrónica",
+        "precio": 450,
+        "imagen":"https://m.media-amazon.com/images/I/61oAnIYKPVL.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Zapatillas deportivas",
+        "categoria": "Ropa",
+        "precio": 80,
+        "imagen":"https://m.media-amazon.com/images/I/81kvvmH31SL._AC_SY575_.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Laptop",
+        "categoria": "Electrónica",
+        "precio": 1200,
+        "imagen":"https://m.media-amazon.com/images/I/71a8eNpIHTL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Mochila resistente",
+        "categoria": "Accesorios",
+        "precio": 50,
+        "imagen":"https://m.media-amazon.com/images/I/61YKKRDbm+L._AC_SY300_SX300_.jpg"
+    }
+]

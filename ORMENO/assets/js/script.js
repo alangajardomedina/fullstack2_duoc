@@ -17,7 +17,7 @@ btn_saludar.addEventListener("click",()=>{
         console.log("Funciono mensaje de bienvenida.")
     }else{
         mensaje.textContent = "Por favor, ingrese un nombre."
-        console.error("Error: el usuario no ingreso un nombre.")
+        console.warn("!!!: el usuario no ingreso un nombre.")
     }
 })
 
@@ -38,7 +38,7 @@ btn_resetear.addEventListener("click",()=>{
         span_contador.textContent = contador
         console.log("Contador se reseteo.")
     }else{
-        console.error("Error: el contador ya esta en cero.")
+        console.warn("!!!: el contador ya esta en cero.")
     }
 })
 
@@ -58,6 +58,61 @@ btn_agregar.addEventListener("click",()=>{
         inp_tarea.value = ""
         console.log("Se agrego tarea a la lista.")
     }else{
-        console.error("Error: no se escribio una tarea.")
+        console.warn("!!!: no se escribio una tarea.")
     }
 })
+
+//Clase 2: Consumo de JSON con fetch.
+const btn_cargar = document.getElementById("btn_cargar")
+const btn_filtrar = document.getElementById("btn_filtrar")
+const producto_container = document.getElementById("productos_container")
+
+let productos = []
+
+// Vammos a crear una función capar de renderizar los productos en la página web:
+function renderizar_productos(lista){
+    producto_container.innerHTML=""
+    lista.forEach(producto => {
+        const col = document.createElement("div")
+        col.classList.add("col-md-4","col-lg-3")
+
+        col.innerHTML = `
+            <div class="card h-100 shadow-sm">
+                <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+                <div class="card-body">
+                    <h5 class="card-title">${producto.nombre}</h5>
+                    <p class="card-text mb-1"><strong>Categoria:</strong> ${producto.categoria}</p>
+                    <p class="card-text"><strong>Precio:</strong> ${producto.precio}</p>
+                </div>
+            </div>
+        `
+        producto_container.appendChild(col)
+    });
+}
+
+async function cargar_productos(){
+    try{
+        const respuesta = await fetch("assets/json/bd.json")
+        productos = await respuesta.json()
+        renderizar_productos(productos)
+        console.log("La lista de productos se cargo exitosamente.")
+    }catch (error){
+        console.error("Error al cargar producto:",error)
+    }
+}
+
+btn_cargar.addEventListener("click", () => cargar_productos())
+
+btn_filtrar.addEventListener("click", ()=>{
+    if(productos.length === 0){
+        console.warn("Hay que cargar los productos primero.")
+        alert("Primero debes cargar los productos")
+        return
+    }
+
+    const filtrados = productos.filter(producto => producto.categoria === "Electrónica")
+    renderizar_productos(filtrados)
+    console.log("Los productos se filtraron correctamente.")
+})
+
+window.onload(cargar_productos())
