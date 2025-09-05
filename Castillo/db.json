@@ -1,0 +1,22 @@
+[
+    {"id": 1,
+     "nombre": "Smartphone X1",
+     "categoria": "Electrónica",
+     "precio": 450,
+     "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJXHryHGMroqDxCrk5MgIUGBxVSt7cd2XtGA&s"},
+    {"id": 2,
+     "nombre": "Zapatillas Deportivas",
+     "categoria": "Ropa",
+     "precio": 80,
+     "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHSdbCxufmdFq_OYHmHRAc9G3Svs_30HWm4Q&s"},
+    {"id": 3,
+     "nombre": "Laptop Pro 15",
+     "categoria": "Electrónica",
+     "precio": 1200,
+     "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsckAeDyfcnUo6iEbuX-uVIoyOvGG3JubJNnXm6g-8-Qjrb8UN9_xh_S023zRrVOwfrVY&usqp=CAU"},
+    {"id": 4,
+     "nombre": "Mochila Resistente",
+     "categoria": "Accesorios",
+     "precio": 50,
+     "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtNN7kc_YWjTK6t1iu2VCt3LoizHHWBVgp0w&s"}
+]

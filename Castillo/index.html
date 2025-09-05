@@ -6,6 +6,7 @@
     <title>Ya vete del ciber</title>
     <link rel="icon" href="assets/img/Dragon_Ball_Z_AL.webp">
     <link rel="stylesheet" href="assets/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -24,17 +25,30 @@
         </ul>
     </nav>
     <main class="content">  
+        <!-- Clase 2 JS -->
+         <div class="container py-4">
+            <h1 class="text-center text-primary mb-4">Clase 2: Consumo de JSON y renderizado dinámico</h1>
+
+            <div class="text-center mb-4">
+                <button id="btnCargar" class="btn btn-success me-2">Cargar productos</button>
+                <button id="btnFiltrar" class="btn btn-outline-primary">Filtrar electrónica</button>
+            </div>
+
+            <div id="productosContainer" class="row g-4"></div>
+         </div>
+
+
         <section class="card">
             <img src="https://img.wattpad.com/57f1b2c8f48db92eb622fcabab57481f2fbc33a2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f2d3433574952524b6a44464233413d3d2d313234393735393635362e313730336532353934323561376537363130343134393739323438392e6a7067?s=fit&w=720&h=720" 
             alt="majinboo" class="card__image">
             <div class="card__body">
-                <h2 class="card__title">Personaje del día</h2>
-                <p class="card__texto">Majin boo es rosado y tiene capa y tiene botas y tiene hambre</p>
+                <h2 class="card__title" style="color: black;">Personaje del día</h2>
+                <p class="card__texto" style="color: black;">Majin boo es rosado y tiene capa y tiene botas y tiene hambre</p>
                 <a href="https://i.ytimg.com/vi/BTiogAt5x1Y/maxresdefault.jpg" target="_blank" rel="noopener noreferrer" class="card__button card__button--primary">Leer más</a>
             </div>
         </section>
 
-        <h3>¡SELECCIONA UN GUERRERO Z PARA VER SU MEJOR MOMENTO EN EL ANIME!</h2>
+        <h3 style="color: white;">¡SELECCIONA UN GUERRERO Z PARA VER SU MEJOR MOMENTO EN EL ANIME!</h2>
 
         <div id="contenedor-imagen">
             <select name="guerreros" id="guerreros">
@@ -82,7 +96,7 @@
 
         <br><br><br><br><br><br>
         <section class="seccion">
-            <h3>¿QUIERES INVOCAR A SHEN LONG?</h3>
+            <h3 style="color: white;">¿QUIERES INVOCAR A SHEN LONG?</h3>
             <img src="assets/img/dragon.webp" alt="">
             <a href="https://cdn0.recetasgratis.net/es/posts/4/3/6/terremoto_chileno_74634_600_square.jpg" target="_blank" rel="noopener noreferrer">
                 <button class="btn-invocacion">CUMPLE MI DESEO</button>
@@ -102,5 +116,10 @@
     <footer class="footer">
         <p class="footer__text">LA PROGRAMACIÓN ES MI PASIÓN</p>
     </footer>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="script.js"></script>
+
 </body>
 </html>
