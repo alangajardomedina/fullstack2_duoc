@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gajardo</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 </head>
 <body>
     <!--nav sería el bloque-->
@@ -18,6 +19,42 @@
     </nav>
 
     <main class="content">
+        <!-- Sección de mensaje dinámico -->
+        <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <h2 class="h5 text-secondary">Mensaje dinámico</h2>
+            <div class="input-group mb-3">
+            <input type="text" id="nombreInput" class="form-control" placeholder="Escribe tu nombre">
+            <button id="btnSaludar" class="btn btn-primary">Saludar</button>
+            </div>
+            <p id="mensaje" class="fw-bold text-success"></p>
+        </div>
+        </div>
+
+        <!-- Sección del contador -->
+        <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <h2 class="h5 text-secondary">Contador</h2>
+            <div class="d-flex gap-2 mb-3">
+            <button id="btnIncrementar" class="btn btn-success">Incrementar</button>
+            <button id="btnResetear" class="btn btn-outline-danger">Resetear</button>
+            </div>
+            <p class="mb-0">Valor actual: <span id="contador" class="fw-bold">0</span></p>
+        </div>
+        </div>
+
+        <!-- Sección de Todo List -->
+        <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <h2 class="h5 text-secondary">Mini To-Do List</h2>
+            <div class="input-group mb-3">
+            <input type="text" id="tareaInput" class="form-control" placeholder="Escribe una tarea">
+            <button id="btnAgregar" class="btn btn-primary">Agregar tarea</button>
+            </div>
+            <ul id="listaTareas" class="list-group"></ul>
+        </div>
+        </div>
+
         <section class="card">
             <img src="https://www.anicura.es/cdn-cgi/image/f=auto,fit=cover,w=520,h=520,g=auto,sharpen=1/AdaptiveImages/powerinit/52437/_SNI2031.jpg?stamp=a2efc90c9d13cd9fdc0f5f7a2e3b2231238dc8cf" alt="gatito" class="card__image">
             <div class="card__body">
@@ -41,5 +78,7 @@
         <p class="footer__text">&copy; 2025 MiSitio con BEM</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
