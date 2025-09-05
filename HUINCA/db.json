@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "Iphone",
+        "categoria": "Electronica",
+        "precio": 650,
+        "imagen": "https://w7.pngwing.com/pngs/60/414/png-transparent-iphone-14.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Yeezy boots",
+        "categoria": "Ropa",
+        "precio": 300,
+        "imagen": "https://crepdogcrew.com/cdn/shop/files/1_076c7481-4993-4b15-b571-167518c1b033.png?v=1755094469&width=2048"
+    },
+    {
+        "id": 3,
+        "nombre": "Laptop gamer",
+        "categoria": "Electronica",
+        "precio": 1000,
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlDeWlG-bYxbrx8BU7Fjmv-PlnS0Wz3-fjbA&s"
+    },
+    {
+        "id": 4,
+        "nombre": "Mochila nike",
+        "categoria": "Accesorios",
+        "precio": 50,
+        "imagen": "https://www.cienporcientofutbol.cl/cdn/shop/files/DV0761_011_A_PREM_1000x1000.webp?v=1686760757"
+    }
+]

@@ -6,10 +6,16 @@
     <title>Huinca</title>
 
     <link rel="stylesheet" href="estilos.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
 </head>
 
 <body>
+
+   
+
+
+    
     <!-- nav seria mi bloque-->
     <nav class="navbar">
         <div class="navbar__logo">Mi pagina</div>
@@ -21,7 +27,25 @@
         </ul>
     </nav>
 
+     <!--Clase 2 JS: JSON-->
+
+
     <main class="content">
+
+        <div class="container py-4">
+            <h1 class="text-center text-success mb-4">Clase 2: El consumo de JSON renderizado dinamico</h1>
+
+            <div class="text-center mb-4">
+                <button id= "btnCargar" class="btn btn-success me-2">Cargar productos</button>
+                <button id= "btnFiltrar" class="btn btn-outline-secondary">Filtrar electronica</button>
+            </div>
+
+            <div id="productosContainer" class = "row g-4"></div>
+
+        </div>
+
+
+
         <section class="card">
             <img src="https://hips.hearstapps.com/hmg-prod/images/dewey-malcolm-fotogramas-1626112299.jpg?crop=0.870xw:0.755xh;0.0465xw,0.0153xh&resize=1200:*" width="100px" alt="dewey" class="card__image">
             <div class="card__body">
@@ -43,5 +67,7 @@
         <p class="footer__text">&copy 2025 Todos los derechos reservados</p>
     </footer>
 
+
+    <script src="script.js"></script>
 </body>
 </html>
