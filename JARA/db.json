@@ -1,0 +1,32 @@
+[{
+    "id": 1,
+    "nombre": "SmartPhone",
+    "categoria": "Electronica",
+    "precio": 450,
+    "imagen": "https://www.vivosmartphone.cl/cdn/shop/files/2_2dce9320-765f-4b4e-993c-7d5c9d86d04d.png?v=1751303819"
+},
+
+{
+    "id": 2,
+    "nombre": "Zapatillas deportivas",
+    "categoria": "Ropa",
+    "precio": 80,
+    "imagen": "https://media.falabella.com/falabellaCL/883305177_1/w=800,h=800,fit=pad"
+},
+
+{
+    "id": 3,
+    "nombre": "Laptop Pro 15",
+    "categoria": "Electronica",
+    "precio": 1200,
+    "imagen": "https://www.apple.com/newsroom/images/tile-images/Apple_16-inch-MacBook-Pro_111319.jpg.og.jpg?202505091728"
+},
+
+{
+    "id": 4,
+    "nombre": "Mochila resistente",
+    "categoria": "Accesorios",
+    "precio": 50,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_811035-CBT78947587830_092024-O.webp"
+
+}]

@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <!--nav seria el bloque-->
     <nav class="navbar">
         <div class="navbar__logo">Mi Sitio</div>
         <ul class="navbar__menu">
@@ -17,7 +18,19 @@
         </ul>
     </nav>
 
-    <main>
+    <main class="content">
+        <!--Clase 2-->
+        <div class="container py-4">
+            <h1 class="text-center text-primary mb-4">Clase 2: Consumo de JSON y renderizado dinámico</h1>
+
+            <div class="text-center mb-4">
+                <button id="btnCargar" class="btn btn-success me-2">Cargar productos</button>
+                <button id="btnFiltrar" class="btn btn-outline-primary">Filtrar electrónica</button>
+            </div>
+
+            <div id="productosContainer" class="row g-4"></div>
+        </div>
+
         <!--section>img+div>h2+p+a-->
         <div class="container py-4">
             <div class="card__body">
