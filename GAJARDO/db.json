@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "Smarthphone X1",
+        "categoria": "Electrónica",
+        "precio": 450,
+        "imagen": "https://tse1.mm.bing.net/th/id/OIP.MAsmPuvdbO92c3tzrxikkwHaEO?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+        "id": 2,
+        "nombre": "Zapatillas deportivas",
+        "categoria": "Ropa",
+        "precio": 80,
+        "imagen": "https://tse4.mm.bing.net/th/id/OIP.lnSDwhChVE3yVHo5DIMcAQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+        "id": 3,
+        "nombre": "Laptop Pro 15",
+        "categoria": "Electrónica",
+        "precio": 1200,
+        "imagen": "https://visiongeek.pe/wp-content/uploads/Xiaomi-Mi-Laptop-Pro-15-Con-pantalla-OLED-3.5K-y-9-horas-de-autonomia-real.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Mochila resistente",
+        "categoria": "Accesorios",
+        "precio": 50,
+        "imagen": "https://tse4.mm.bing.net/th/id/OIP.7uMXflw0FWZAyhWt7-JbjAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    }
+]

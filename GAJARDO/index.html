@@ -19,40 +19,54 @@
     </nav>
 
     <main class="content">
+        <!--Clase 2-->
+        <div class="container py-4">
+            <h1 class="text-center text-primary mb-4">Clase 2: Consumo de JSON y renderizado dinámico</h1>
+
+            <div class="text-center mb-4">
+                <button id="btnCargar" class="btn btn-success me-2">Cargar productos</button>
+                <button id="btnFiltrar" class="btn btn-outline-primary">Filtrar electrónica</button>
+            </div>
+
+            <div id="productosContainer" class="row g-4"></div>
+        </div>
+
+
+        <!--Clase 1-->
         <!-- Sección de mensaje dinámico -->
         <div class="card mb-4 shadow-sm">
-        <div class="card-body">
-            <h2 class="h5 text-secondary">Mensaje dinámico</h2>
-            <div class="input-group mb-3">
-            <input type="text" id="nombreInput" class="form-control" placeholder="Escribe tu nombre">
-            <button id="btnSaludar" class="btn btn-primary">Saludar</button>
+            <div class="card-body">
+                <h2 class="h5 text-secondary">Mensaje dinámico</h2>
+                <div class="input-group mb-3">
+                <input type="text" id="nombreInput" class="form-control" placeholder="Escribe tu nombre">
+                <button id="btnSaludar" class="btn btn-primary">Saludar</button>
+                </div>
+                <p id="mensaje" class="fw-bold text-success"></p>
             </div>
-            <p id="mensaje" class="fw-bold text-success"></p>
-        </div>
         </div>
 
         <!-- Sección del contador -->
         <div class="card mb-4 shadow-sm">
-        <div class="card-body">
-            <h2 class="h5 text-secondary">Contador</h2>
-            <div class="d-flex gap-2 mb-3">
-            <button id="btnIncrementar" class="btn btn-success">Incrementar</button>
-            <button id="btnResetear" class="btn btn-outline-danger">Resetear</button>
+            <div class="card-body">
+                <h2 class="h5 text-secondary">Contador</h2>
+                <div class="d-flex gap-2 mb-3">
+                <button id="btnIncrementar" class="btn btn-success">Incrementar</button>
+                <button id="btnResetear" class="btn btn-outline-danger">Resetear</button>
+                </div>
+                <p class="mb-0">Valor actual: <span id="contador" class="fw-bold">0</span></p>
             </div>
-            <p class="mb-0">Valor actual: <span id="contador" class="fw-bold">0</span></p>
-        </div>
         </div>
 
         <!-- Sección de Todo List -->
         <div class="card mb-4 shadow-sm">
-        <div class="card-body">
-            <h2 class="h5 text-secondary">Mini To-Do List</h2>
-            <div class="input-group mb-3">
-            <input type="text" id="tareaInput" class="form-control" placeholder="Escribe una tarea">
-            <button id="btnAgregar" class="btn btn-primary">Agregar tarea</button>
+            <div class="card-body">
+                <h2 class="h5 text-secondary">Mini To-Do List</h2>
+                <div class="input-group mb-3">
+                <input type="text" id="tareaInput" class="form-control" placeholder="Escribe una tarea">
+                <button id="btnAgregar" class="btn btn-primary">Agregar tarea</button>
+                </div>
+                <ul id="listaTareas" class="list-group"></ul>
             </div>
-            <ul id="listaTareas" class="list-group"></ul>
-        </div>
         </div>
 
         <section class="card">
